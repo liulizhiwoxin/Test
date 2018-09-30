@@ -1,0 +1,159 @@
+﻿.js-scroll
+{
+	float:left;
+}
+.js-scroll-text
+{
+	
+}
+a.img-off
+{
+	cursor: pointer;
+    display: inline-block;
+    float: right;
+    width:27px;
+	height:26px;
+	background: transparent url(../images/icon1.jpg) no-repeat -418px -443px;
+}
+a.img-on
+{
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    width:27px;
+	height:26px;
+	background: transparent url(../images/icon1.jpg) no-repeat -418px -443px;
+}
+/*********************************@group jscontent*************************************************/
+.js-scroll-content
+{
+	margin-top:-14px;
+	position: absolute;
+}
+.liop
+{
+	height:15px;
+	padding:5px 0;	
+	list-style-type: none;
+}
+/*********************************@group barbg************************************************/
+.js-scroll-barbg
+{
+	position:absolute;
+	right:19px;
+	width:9px;
+	-moz-user-select: none;
+}
+.js-scroll-barbg .barbg-top
+{
+	width:9px;
+	height:9px;
+	background:	url("images/barbg-top.png");
+}
+.js-scroll-barbg .barbg-middle
+{
+	width:9px;
+	background:	url("images/barbg-middle.png");	
+}
+.js-scroll-barbg .barbg-bottom
+{
+	width:9px;
+	height:9px;
+	background:	url("images/barbg-bottom.png");			
+}
+/*********************************@group scrollbar************************************************/
+.js-scroll-scrollbar
+{
+	position:absolute;
+	right:19px;
+	width:9px;
+	cursor:pointer;
+	-moz-user-select: none;
+}
+.js-scroll-scrollbar .scrollbar-top
+{
+	width:9px;
+	height:9px;
+	background:	url("images/scrollbar-top.png");
+}
+.js-scroll-scrollbar .scrollbar-middle
+{
+	width:9px;
+	height:9px;
+	background:	url("images/scrollbar-mid.png");
+}
+.js-scroll-scrollbar .scrollbar-bottom
+{
+	width:9px;
+	height:9px;
+	background:	url("images/scrollbar-bottom.png");
+}
+/*********************************@group scrollbar************************************************/
+.js-scroll-content-body
+{
+	position:absolute;	
+	width:100%;
+}
+.js-scroll-content-body ul
+{
+	padding:0px;
+	margin:0px;	
+}
+.js-scroll-content-body .liop
+{
+	cursor:pointer;
+	padding-left:5px;
+}
+
+
+
+/***************************@group special settings*************************/
+.o_select .js-scroll-text .c
+{
+	width:445px;
+	height:39px;
+	background:url("images/select-middle.png");
+	
+}
+.o_select .js-scroll-text .c input
+{
+    border:none;
+    float: left;
+    font-weight: normal;
+    height: 26px;
+	width: 406px;
+    background: transparent url(../images/icon1.jpg) no-repeat 0 -443px;
+}
+.o_select .js-scroll-content .contentbg-top
+{
+	width:427px;
+	height:8px;
+	background:white;
+	border-top:1px solid #ccc;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+.o_select .js-scroll-content .contentbg-middle
+{
+	width:427px;
+	height:8px;
+	background:white;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	position:relative;
+	overflow:hidden;
+}
+.o_select .js-scroll-content .contentbg-bottom
+{
+	width:427px;
+	height:8px;
+	background:white;
+	border-bottom:1px solid #ccc;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+/************************************@group arrow-over*******************/
+a.arrow-over
+{
+	/*border:1px solid #cccccc;	*/
+}

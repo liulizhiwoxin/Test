@@ -1,0 +1,3632 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Vincent</name>
+    </assembly>
+    <members>
+        <member name="T:Vincent._Baidu.Map">
+            <summary>
+            百度地图有关
+            </summary>
+        </member>
+        <member name="M:Vincent._Baidu.Map.GetShortDistance(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            适用于近距离
+            </summary>
+            <param name="lon1">出发点经度</param>
+            <param name="lat1">出发点纬度</param>
+            <param name="lon2">终点 经度</param>
+            <param name="lat2">终点 纬度</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Baidu.Map.GetLongDistance(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            适用于远距离
+            </summary>
+            <param name="lon1">出发点经度</param>
+            <param name="lat1">出发点纬度</param>
+            <param name="lon2">终点 经度</param>
+            <param name="lat2">终点 纬度</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent.Excel.Exportexcel.AddHeadFile(System.Text.StringBuilder)">
+             <summary>
+            
+             </summary>
+             <param name="OutFileContent"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Vincent.Excel.Exportexcel.AddEndFile(System.Text.StringBuilder)">
+            <summary>
+            РґexcelОІ
+            </summary>
+            <param name="OutFileContent"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Vincent._IO.File">
+            <summary>
+            文件操作类
+            </summary>
+        </member>
+        <member name="M:Vincent._IO.File.GetFileList(System.String)">
+            <summary>
+            遍历路径下的所有文件名
+            </summary>
+            <param name="FilePath"> 相对路径 </param>
+            <returns> 文件名数组 </returns>
+        </member>
+        <member name="M:Vincent._IO.File.CreateDirectory(System.String)">
+            <summary>
+            创建某路径下的所有文件夹,如: D:/webpart/0101 检查是否有该文件夹,没有则新建
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Vincent._IO.UpZip">
+            <summary>
+            解压zip文件
+            </summary>
+        </member>
+        <member name="M:Vincent._IO.UpZip.UnZip(System.String[])">
+            <summary>
+            解压文件
+            </summary>
+            <param name="args">包含要解压的文件名和要解压到的目录名数组</param>
+        </member>
+        <member name="M:Vincent._IO.Zip.ZipFile(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            压缩文件
+            </summary>
+            <param name="FileToZip"> 待压缩的文件 </param>
+            <param name="ZipedFile"></param>
+            <param name="CompressionLevel"> 压缩等级 </param>
+            <param name="BlockSize"></param>
+        </member>
+        <member name="T:Vincent._Weixin.WeixinEnterprisePay">
+            <summary>
+            微信企业付款
+            </summary>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinEnterprisePay.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            webconfig中获取必要参数
+            </summary>
+            <param name="WebConfig_APPID_Name">Web.config文件下的APPID参数名称</param>
+            <param name="WebConfig_APPSECRET_Name">Web.config文件下的APPSECRET参数名称</param>
+            <param name="WebConfig_PARTNER_Name">Web.config文件下的PARTNER参数名称</param>
+            <param name="WebConfig_PARTNER_KEY_Name">Web.config文件下的PARTNER_KEY参数名称</param>
+            <param name="WebConfig_RETURN_URL_Name">Web.config文件下的RETURN_URL参数名称</param>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinEnterprisePay.EnterprisePay(System.String,System.String,System.Decimal,System.String,System.String)">
+            <summary>
+            企业付款给个人
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinEnterprisePay.HttpPost(System.String,System.String,System.Boolean,System.Int32)">
+            <summary>
+            post提交支付
+            </summary>
+            <param name="xml"></param>
+            <param name="url"></param>
+            <param name="isUseCert">是否使用证书</param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinEnterprisePay.Get(System.String)">
+            <summary>
+            处理http GET请求，返回数据
+            </summary>
+            <param name="url">请求的url地址</param>
+            <returns>http GET成功后返回的数据，失败抛WebException异常</returns>
+        </member>
+        <member name="M:Vincent._Weixin.JsonUtils.SerializeToJson(System.Object)">
+            <summary>
+            把对象转成json字符串
+            </summary>
+            <param name="o">对象</param>
+            <returns>json字符串</returns>
+        </member>
+        <member name="M:Vincent._Weixin.JsonUtils.DeserializeToModel``1(System.String)">
+            <summary>
+            把json字符串转成对象
+            </summary>
+            <typeparam name="T">对象</typeparam>
+            <param name="data">json字符串</param> 
+        </member>
+        <member name="T:Vincent._Weixin.StreamReaderUtils">
+            <summary>
+            密封类（防止被继承、重写）
+            </summary>
+        </member>
+        <member name="M:Vincent._Weixin.StringUtils.GetJsonObject(System.String)">
+            <summary>
+            读取Json数据
+            </summary>
+            <param name="strJson">Json格式数据</param>
+            <returns>Json对象</returns>
+        </member>
+        <member name="M:Vincent._Weixin.StringUtils.GetJsonValue(System.String,System.String)">
+            <summary>
+            根据Key获取
+            </summary>
+            <param name="strJson">Json格式数据</param>
+            <param name="Key">Json Key</param>
+            <returns>值</returns>
+        </member>
+        <member name="T:Vincent._Weixin.WeixinScanPay">
+            <summary>
+            微信扫码支付
+            </summary>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinScanPay.#ctor">
+            <summary>
+            微信扫码支付
+            </summary>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinScanPay.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            webconfig中获取必要参数
+            </summary>
+            <param name="WebConfig_APPID_Name">Web.config文件下的APPID参数名称</param>
+            <param name="WebConfig_APPSECRET_Name">Web.config文件下的APPSECRET参数名称</param>
+            <param name="WebConfig_PARTNER_Name">Web.config文件下的PARTNER参数名称</param>
+            <param name="WebConfig_PARTNER_KEY_Name">Web.config文件下的PARTNER_KEY参数名称</param>
+            <param name="WebConfig_RETURN_URL_Name">Web.config文件下的RETURN_URL参数名称</param>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinScanPay.GetPrePayUrl(System.String)">
+            <summary>
+            生成扫描支付模式一URL
+            </summary>
+            <param name="productId">商品ID</param>
+            <returns>模式一URL</returns>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinScanPay.GetPayUrl(System.String,System.Int32)">
+            <summary>
+            生成直接支付url，支付url有效期为2小时,模式二
+            </summary>
+            <param name="productId">商品ID</param>
+            <param name="totalFee">商品价格</param>
+            <returns>模式二URL</returns>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinScanPay.GetPayUrl(System.String,System.Int32,System.String)">
+            <summary>
+            生成直接支付url，支付url有效期为2小时,模式二
+            </summary>
+            <param name="productId">商品ID(即订单号 12_33_23)...)</param>
+            <param name="totalFee">商品价格</param>       
+            <param name="body">商品描述</param>
+            <returns>模式二URL</returns>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinScanPay.ToUrlParams(System.Collections.Generic.SortedDictionary{System.String,System.Object})">
+            <summary>
+            参数数组转换为url格式
+            </summary>
+            <param name="map">参数名与参数值的映射表</param>
+            <returns>URL字符串</returns>
+        </member>
+        <member name="T:Vincent._Weixin.WeixinScanPayData">
+            <summary>
+            微信支付协议接口数据类，所有的API接口通信都依赖这个数据结构，
+            在调用接口之前先填充各个字段的值，然后进行接口通信，
+            这样设计的好处是可扩展性强，用户可随意对协议进行更改而不用重新设计数据结构，
+            还可以随意组合出不同的协议数据包，不用为每个协议设计一个数据包结构
+            </summary>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinScanPayData.SetValue(System.String,System.Object)">
+                        * 设置某个字段的值
+                        * @param key 字段名
+                         * @param value 字段值
+        </member>
+        <member name="M:Vincent._Weixin.WeixinScanPayData.GetValue(System.String)">
+                        * 根据字段名获取某个字段的值
+                        * @param key 字段名
+                         * @return key对应的字段值
+        </member>
+        <member name="M:Vincent._Weixin.WeixinScanPayData.IsSet(System.String)">
+            判断某个字段是否已设置
+            @param key 字段名
+            @return 若字段key已被设置，则返回true，否则返回false
+        </member>
+        <member name="M:Vincent._Weixin.WeixinScanPayData.ToXml">
+             @将Dictionary转成xml
+             @return 经转换得到的xml串
+             @throws WxPayException
+            
+        </member>
+        <member name="M:Vincent._Weixin.WeixinScanPayData.FromXml(System.String)">
+            @将xml转为WxPayData对象并返回对象内部的数据
+            @param string 待转换的xml串
+            @return 经转换得到的Dictionary
+            @throws WxPayException
+        </member>
+        <member name="M:Vincent._Weixin.WeixinScanPayData.ToUrl">
+            @Dictionary格式转化成url参数格式
+            @ return url格式串, 该串不包含sign字段值
+        </member>
+        <member name="M:Vincent._Weixin.WeixinScanPayData.ToJson">
+                        * @Dictionary格式化成Json
+                         * @return json串数据
+        </member>
+        <member name="M:Vincent._Weixin.WeixinScanPayData.ToPrintStr">
+            @values格式化成能在Web页面上显示的结果（因为web页面上不能直接输出xml格式的字符串）
+        </member>
+        <member name="M:Vincent._Weixin.WeixinScanPayData.MakeSign">
+            @生成签名，详见签名生成算法
+            @return 签名, sign字段不参加签名
+        </member>
+        <member name="M:Vincent._Weixin.WeixinScanPayData.MakeSign(System.String)">
+            @生成签名，详见签名生成算法
+            @return 签名, sign字段不参加签名
+        </member>
+        <member name="M:Vincent._Weixin.WeixinScanPayData.CheckSign">
+            
+            检测签名是否正确
+            正确返回true，错误抛异常
+        </member>
+        <member name="M:Vincent._Weixin.WeixinScanPayData.GetValues">
+            @获取Dictionary
+        </member>
+        <member name="T:Vincent._Weixin.WeixinStreamReaderUtils">
+            <summary>
+            密封类（防止被继承、重写）
+            </summary>
+        </member>
+        <member name="T:Vincent._Weixin.WeixinCustomerService">
+            <summary>
+            微信客服接口，处理服务号单独给某粉丝发信息
+            </summary>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinCustomerService.SendMessage(System.String,System.String)">
+            <summary>
+            公众号 发送信息给某微信用户
+            </summary>
+            <param name="toOpenid">发给谁</param>
+            <param name="Content">发送的内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinCustomerService.HttpGet(System.String)">
+            <summary>
+            模拟Http的get请求
+            </summary>
+            <param name="Url">链接地址</param>        
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Vincent._Weixin.WeixinCustomerService.HttpPost(System.String,System.String)" -->
+        <member name="M:Vincent._Weixin.WeixinCustomerService.HttpPost(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            模拟Http的post请求
+            </summary>
+            <param name="postUrl"></param>
+            <param name="paramData"></param>
+            <param name="dataEncode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinCustomerService.IsExistAccess_Token">
+            <summary>
+            根据当前日期 判断Access_Token 是否超期  如果超期返回新的Access_Token   否则返回之前的Access_Token
+            </summary>
+            <param name="datetime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinCustomerService.GetAccessToken">
+            <summary>
+            获取ticket
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Vincent._Weixin.WeixinGps">
+            <summary>
+            微信定位有关
+            </summary>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinGps.HttpGet(System.String)">
+            <summary>
+            模拟Http的get请求
+            </summary>
+            <param name="Url">链接地址</param>        
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Vincent._Weixin.WeixinGps.HttpPost(System.String,System.String)" -->
+        <member name="M:Vincent._Weixin.WeixinGps.IsExistAccess_Token">
+            <summary>
+            根据当前日期 判断Access_Token 是否超期  如果超期返回新的Access_Token   否则返回之前的Access_Token
+            </summary>
+            <param name="datetime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinGps.GetAccessToken">
+            <summary>
+            获取ticket
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinGps.IsExistJsapi_Ticket(System.String,System.Int32)">
+            <summary>
+            根据当前日期 判断jsapi_ticket 是否超期  如果超期返回新的jsapi_ticket   否则返回之前的jsapi_ticket
+            </summary>
+            <param name="access_token"></param>
+            <param name="_index">1 jsapi_ticket 2timestap 3nonceStr</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinGps.IsExistJsapi_Ticket(System.Int32)">
+            <summary>
+            根据当前日期 判断jsapi_ticket 是否超期  如果超期返回新的jsapi_ticket   否则返回之前的jsapi_ticket
+            </summary>        
+            <param name="_index">1 jsapi_ticket 2timestap 3nonceStr</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinGps.CreatenNonce_str">
+             <summary>
+             创建随机字符串
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Vincent._Weixin.WeixinPay" -->
+        <member name="M:Vincent._Weixin.WeixinPay.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            webconfig中获取必要参数
+            </summary>
+            <param name="WebConfig_APPID_Name">Web.config文件下的APPID参数名称</param>
+            <param name="WebConfig_APPSECRET_Name">Web.config文件下的APPSECRET参数名称</param>
+            <param name="WebConfig_PARTNER_Name">Web.config文件下的PARTNER参数名称</param>
+            <param name="WebConfig_PARTNER_KEY_Name">Web.config文件下的PARTNER_KEY参数名称</param>
+            <param name="WebConfig_RETURN_URL_Name">Web.config文件下的RETURN_URL参数名称</param>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinPay.Get_RequestHtml(System.String,System.String,System.Decimal,System.String,System.String)">
+            <summary>
+            获取支付脚本内容
+            </summary>
+            <param name="openid"></param>
+            <param name="Bill_No"></param>
+            <param name="Charge_Amt"></param>
+            <param name="Body"></param>
+            <param name="PayType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinPay.FilterPara(System.Collections.Generic.SortedDictionary{System.String,System.String})">
+            <summary>
+            除去数组中的空值和签名参数并以字母a到z的顺序排序
+            </summary>
+            <param name="dicArrayPre">过滤前的参数组</param>
+            <returns>过滤后的参数组</returns>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinPay.GetMD5(System.String,System.String)">
+            获取大写的MD5签名结果 
+        </member>
+        <member name="T:Vincent._Weixin.WeixinPersonInfo">
+            <summary>
+            微信用户信息
+            </summary>
+        </member>
+        <member name="P:Vincent._Weixin.WeixinPersonInfo.subscribe">
+            <summary>
+            是否已关注公众号
+            </summary>
+        </member>
+        <member name="P:Vincent._Weixin.WeixinPersonInfo.openid">
+            <summary>
+            用户openid
+            </summary>
+        </member>
+        <member name="P:Vincent._Weixin.WeixinPersonInfo.nickname">
+            <summary>
+            微信呢称
+            </summary>
+        </member>
+        <member name="P:Vincent._Weixin.WeixinPersonInfo.sex">
+            <summary>
+            微信用户性别
+            </summary>
+        </member>
+        <member name="P:Vincent._Weixin.WeixinPersonInfo.language">
+            <summary>
+            语言
+            </summary>
+        </member>
+        <member name="P:Vincent._Weixin.WeixinPersonInfo.headimgurl">
+            <summary>
+            微信头像
+            </summary>
+        </member>
+        <member name="T:Vincent._Weixin.WeixinUtility">
+            <summary>
+            微信接口常用工具类
+            </summary>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinUtility.GetOpendId">
+            <summary>
+            获取用户openid
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinUtility.GetWeixinUserInfo">
+            <summary>
+            获取微信用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinUtility.GetWeixinUserInfo(System.String)">
+            <summary>
+            获取微信用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinUtility.IsExistAccess_Token">
+            <summary>
+            根据当前日期 判断Access_Token 是否超期  如果超期返回新的Access_Token   否则返回之前的Access_Token
+            </summary>
+            <param name="datetime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinUtility.GetAccessToken">
+            <summary>
+            获取ticket
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinUtility.HttpGet(System.String)">
+            <summary>
+            模拟Http的get请求
+            </summary>
+            <param name="Url">链接地址</param>        
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Vincent._Weixin.WeixinUtility.HttpGet(System.String,System.String)" -->
+        <member name="M:Vincent._Weixin.WeixinUtility.IsExistJsapiTicket">
+            <summary>
+            xmlconfig目录下的weixin.config文件中取
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinUtility.IsExistJsapiTicket(System.String@,System.String@)">
+            <summary>
+            xmlconfig目录下的weixin.config文件中取
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinUtility.GetJsapiTicket">
+            <summary>
+            获取JsapiTicket
+            </summary>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinUtility.GetJsapiTicket(System.String)">
+            <summary>
+            获取JsapiTicket
+            </summary>
+            <param name="access_token">access_token是公众号的全局唯一票据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Weixin.WeixinUtility.GenerateOutTradeNo">
+                    * 根据当前系统时间加随机序列来生成订单号
+                     * @return 订单号
+        </member>
+        <member name="M:Vincent._Weixin.WeixinUtility.GenerateTimeStamp">
+                    * 生成时间戳，标准北京时间，时区为东八区，自1970年1月1日 0点0分0秒以来的秒数
+                     * @return 时间戳
+        </member>
+        <member name="M:Vincent._Weixin.WeixinUtility.GenerateNonceStr">
+            生成随机串，随机串包含字母或数字
+            @return 随机串
+        </member>
+        <member name="M:Vincent._Weixin.WeixinUtility.UnifiedOrder(Vincent._Weixin.WeixinScanPayData,System.Int32)">
+            
+            统一下单
+            @param WxPaydata inputObj 提交给统一下单API的参数
+            @param int timeOut 超时时间
+            @throws WxPayException
+            @return 成功时返回，其他抛异常
+        </member>
+        <member name="M:Vincent._Weixin.WeixinUtility.ReportCostTime(System.String,System.Int32,Vincent._Weixin.WeixinScanPayData)">
+            
+            测速上报
+            @param string interface_url 接口URL
+            @param int timeCost 接口耗时
+            @param WxPayData inputObj参数数组
+        </member>
+        <member name="M:Vincent._Weixin.WeixinUtility.Report(Vincent._Weixin.WeixinScanPayData,System.Int32)">
+            
+            测速上报接口实现
+            @param WxPayData inputObj 提交给测速上报接口的参数
+            @param int timeOut 测速上报接口超时时间
+            @throws WxPayException
+            @return 成功时返回测速上报接口返回的结果，其他抛异常
+        </member>
+        <member name="T:Vincent._Express">
+            <summary>
+            快递有关
+            </summary>
+        </member>
+        <member name="M:Vincent._Express.ExpressInfoByKui100(System.String,System.String,System.String)">
+            <summary>
+            通过快递100，查询物流信息
+            </summary>
+            <param name="expressType">快递公司名称</param>
+            <param name="expressNo">快递单号</param>
+            <param name="callBackUrl">回调到哪个URL</param>
+        </member>
+        <member name="T:Vincent._Log4Net">
+            <summary>
+            log4net.dll 系统错误操作类
+            </summary>
+        </member>
+        <member name="M:Vincent._Log4Net.Debug(System.Object)">
+            <summary>
+            系统异常记录
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Vincent._Log4Net.Debug(System.Object,System.Exception)">
+            <summary>
+            系统异常记录
+            </summary>
+            <param name="message"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:Vincent._Log4Net.Error(System.Object)">
+            <summary>
+            系统错误日志
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Vincent._Log4Net.Error(System.Object,System.Exception)">
+            <summary>
+            系统错误日志
+            </summary>
+            <param name="message"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="M:Vincent._Log4Net.GetCurrentMethodFullName">
+            <summary>
+            新建文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Log4Net.Info(System.Object)">
+            <summary>
+            系统信息日志
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Vincent._Log4Net.Info(System.Object,System.Exception)">
+            <summary>
+            系统信息日志
+            </summary>
+            <param name="message"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:Vincent._Log4Net.Warn(System.Object)">
+            <summary>
+            系统警告日志
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Vincent._Log4Net.Warn(System.Object,System.Exception)">
+            <summary>
+            系统警告日志
+            </summary>
+            <param name="message"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="T:Vincent._QRCode">
+            <summary>
+            产生二维码
+            make
+            </summary>
+        </member>
+        <member name="M:Vincent._QRCode.CreateQRcodeToByte(System.String)">
+            <summary>
+            产生二维码,image/png格式
+            </summary>
+            <param name="code">链接</param>
+            <returns></returns>
+        </member>
+        <member name="T:Vincent._DTcms.DTEnums.ActionEnum">
+            <summary>
+            统一管理操作枚举
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.ActionEnum.All">
+            <summary>
+            所有
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.ActionEnum.Show">
+            <summary>
+            显示
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.ActionEnum.View">
+            <summary>
+            查看
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.ActionEnum.Add">
+            <summary>
+            添加
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.ActionEnum.Edit">
+            <summary>
+            修改
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.ActionEnum.Delete">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.ActionEnum.Audit">
+            <summary>
+            审核
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.ActionEnum.Reply">
+            <summary>
+            回复
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.ActionEnum.Confirm">
+            <summary>
+            确认
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.ActionEnum.Cancel">
+            <summary>
+            取消
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.ActionEnum.Invalid">
+            <summary>
+            作废
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.ActionEnum.Build">
+            <summary>
+            生成
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.ActionEnum.Instal">
+            <summary>
+            安装
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.ActionEnum.UnLoad">
+            <summary>
+            卸载
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.ActionEnum.Login">
+            <summary>
+            登录
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.ActionEnum.Back">
+            <summary>
+            备份
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.ActionEnum.Restore">
+            <summary>
+            还原
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.ActionEnum.Replace">
+            <summary>
+            替换
+            </summary>
+        </member>
+        <member name="T:Vincent._DTcms.DTEnums.NavigationEnum">
+            <summary>
+            系统导航菜单类别枚举
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.NavigationEnum.System">
+            <summary>
+            系统后台菜单
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.NavigationEnum.Users">
+            <summary>
+            会员中心导航
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.NavigationEnum.WebSite">
+            <summary>
+            网站主导航
+            </summary>
+        </member>
+        <member name="T:Vincent._DTcms.DTEnums.CodeEnum">
+            <summary>
+            用户生成码枚举
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.CodeEnum.RegVerify">
+            <summary>
+            注册验证
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.CodeEnum.Register">
+            <summary>
+            邀请注册
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.CodeEnum.Password">
+            <summary>
+            取回密码
+            </summary>
+        </member>
+        <member name="T:Vincent._DTcms.DTEnums.AmountTypeEnum">
+            <summary>
+            金额类型枚举
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.AmountTypeEnum.SysGive">
+            <summary>
+            系统赠送
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.AmountTypeEnum.Recharge">
+            <summary>
+            在线充值
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.AmountTypeEnum.Consumption">
+            <summary>
+            用户消费
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.AmountTypeEnum.BuyGoods">
+            <summary>
+            购买商品
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTEnums.AmountTypeEnum.Convert">
+            <summary>
+            积分兑换
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.ASSEMBLY_VERSION">
+            <summary>
+            版本号全称
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.ASSEMBLY_YEAR">
+            <summary>
+            版本年号
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.FILE_PLUGIN_XML_CONFING">
+            <summary>
+            插件配制文件名
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.FILE_SITE_XML_CONFING">
+            <summary>
+            站点配置文件名
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.FILE_URL_XML_CONFING">
+            <summary>
+            URL配置文件名
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.FILE_USER_XML_CONFING">
+            <summary>
+            用户配置文件名
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.FILE_ORDER_XML_CONFING">
+            <summary>
+            订单配置文件名
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.FILE_URL_UPGRADE_CODE">
+            <summary>
+            升级代码
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.FILE_URL_NOTICE_CODE">
+            <summary>
+            消息代码
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.DIRECTORY_REWRITE_ASPX">
+            <summary>
+            ASPX目录名
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.DIRECTORY_REWRITE_HTML">
+            <summary>
+            HTML目录名
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.DIRECTORY_REWRITE_MOBILE">
+            <summary>
+            MOBILE目录名
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.DIRECTORY_REWRITE_PLUGIN">
+            <summary>
+            插件目录名
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.CACHE_SITE_CONFIG">
+            <summary>
+            站点配置
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.CACHE_USER_CONFIG">
+            <summary>
+            用户配置
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.CACHE_ORDER_CONFIG">
+            <summary>
+            订单配置
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:Vincent._DTcms.DTKeys.CACHE_SITE_HTTP_MODULE" -->
+        <member name="F:Vincent._DTcms.DTKeys.CACHE_SITE_HTTP_DOMAIN">
+            <summary>
+            绑定域名
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.CACHE_SITE_DIRECTORY">
+            <summary>
+            站点一级目录名
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.CACHE_SITE_ASPX_DIRECTORY">
+            <summary>
+            站点ASPX目录名
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.CACHE_SITE_URLS">
+            <summary>
+            URL重写映射表
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.CACHE_SITE_URLS_LIST">
+            <summary>
+            URL重写LIST列表
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.CACHE_OFFICIAL_UPGRADE">
+            <summary>
+            升级通知
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.CACHE_OFFICIAL_NOTICE">
+            <summary>
+            官方消息
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.SESSION_CODE">
+            <summary>
+            网页验证码
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.SESSION_SMS_CODE">
+            <summary>
+            短信验证码
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.SESSION_ADMIN_INFO">
+            <summary>
+            后台管理员
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.SESSION_USER_INFO">
+            <summary>
+            会员用户
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.COOKIE_DIGG_KEY">
+            <summary>
+            防重复顶踩KEY
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.COOKIE_COMMENT_KEY">
+            <summary>
+            防重复评论KEY
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.COOKIE_DOWNLOAD_KEY">
+            <summary>
+            防止下载重复扣各分
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.COOKIE_USER_NAME_REMEMBER">
+            <summary>
+            记住会员用户名
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.COOKIE_USER_PWD_REMEMBER">
+            <summary>
+            记住会员密码
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.COOKIE_SHOPPING_CART">
+            <summary>
+            购物车
+            </summary>
+        </member>
+        <member name="F:Vincent._DTcms.DTKeys.COOKIE_URL_REFERRER">
+            <summary>
+            返回上一页
+            </summary>
+        </member>
+        <member name="T:Vincent._DTcms.DTRequest">
+            <summary>
+            Request²Ù×÷Àà
+            </summary>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.IsPost">
+            <summary>
+            ÅÐ¶Ïµ±Ç°Ò³ÃæÊÇ·ñ½ÓÊÕµ½ÁËPostÇëÇó
+            </summary>
+            <returns>ÊÇ·ñ½ÓÊÕµ½ÁËPostÇëÇó</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.IsGet">
+            <summary>
+            ÅÐ¶Ïµ±Ç°Ò³ÃæÊÇ·ñ½ÓÊÕµ½ÁËGetÇëÇó
+            </summary>
+            <returns>ÊÇ·ñ½ÓÊÕµ½ÁËGetÇëÇó</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetServerString(System.String)">
+            <summary>
+            ·µ»ØÖ¸¶¨µÄ·þÎñÆ÷±äÁ¿ÐÅÏ¢
+            </summary>
+            <param name="strName">·þÎñÆ÷±äÁ¿Ãû</param>
+            <returns>·þÎñÆ÷±äÁ¿ÐÅÏ¢</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetUrlReferrer">
+            <summary>
+            ·µ»ØÉÏÒ»¸öÒ³ÃæµÄµØÖ·
+            </summary>
+            <returns>ÉÏÒ»¸öÒ³ÃæµÄµØÖ·</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetCurrentFullHost">
+            <summary>
+            µÃµ½µ±Ç°ÍêÕûÖ÷»úÍ·
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetHost">
+            <summary>
+            µÃµ½Ö÷»úÍ·
+            </summary>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetDnsSafeHost">
+            <summary>
+            µÃµ½Ö÷»úÃû
+            </summary>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetRawUrl">
+            <summary>
+            »ñÈ¡µ±Ç°ÇëÇóµÄÔ­Ê¼ URL(URL ÖÐÓòÐÅÏ¢Ö®ºóµÄ²¿·Ö,°üÀ¨²éÑ¯×Ö·û´®(Èç¹û´æÔÚ))
+            </summary>
+            <returns>Ô­Ê¼ URL</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.IsBrowserGet">
+            <summary>
+            ÅÐ¶Ïµ±Ç°·ÃÎÊÊÇ·ñÀ´×Ôä¯ÀÀÆ÷Èí¼þ
+            </summary>
+            <returns>µ±Ç°·ÃÎÊÊÇ·ñÀ´×Ôä¯ÀÀÆ÷Èí¼þ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.IsSearchEnginesGet">
+            <summary>
+            ÅÐ¶ÏÊÇ·ñÀ´×ÔËÑË÷ÒýÇæÁ´½Ó
+            </summary>
+            <returns>ÊÇ·ñÀ´×ÔËÑË÷ÒýÇæÁ´½Ó</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetUrl">
+            <summary>
+            »ñµÃµ±Ç°ÍêÕûUrlµØÖ·
+            </summary>
+            <returns>µ±Ç°ÍêÕûUrlµØÖ·</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetQueryString(System.String)">
+            <summary>
+            »ñµÃÖ¸¶¨Url²ÎÊýµÄÖµ
+            </summary>
+            <param name="strName">Url²ÎÊý</param>
+            <returns>Url²ÎÊýµÄÖµ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetQueryString(System.String,System.Boolean)">
+            <summary>
+            »ñµÃÖ¸¶¨Url²ÎÊýµÄÖµ
+            </summary> 
+            <param name="strName">Url²ÎÊý</param>
+            <param name="sqlSafeCheck">ÊÇ·ñ½øÐÐSQL°²È«¼ì²é</param>
+            <returns>Url²ÎÊýµÄÖµ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetQueryIntValue(System.String,System.Int32)">
+            <summary>
+            ·µ»ØÖ¸¶¨URLµÄ²ÎÊýÖµ(IntÐÍ)
+            </summary>
+            <param name="strName">URL²ÎÊý</param>
+            <param name="defaultvalue">Ä¬ÈÏÖµ</param>
+            <returns>·µ»ØÖ¸¶¨URLµÄ²ÎÊýÖµ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetQueryStringValue(System.String,System.String)">
+            <summary>
+            ·µ»ØÖ¸¶¨URLµÄ²ÎÊýÖµ(StringÐÍ)
+            </summary>
+            <param name="strName">URL²ÎÊý</param>
+            <param name="defaultvalue">Ä¬ÈÏÖµ</param>
+            <returns>·µ»ØÖ¸¶¨URLµÄ²ÎÊýÖµ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetPageName">
+            <summary>
+            »ñµÃµ±Ç°Ò³ÃæµÄÃû³Æ
+            </summary>
+            <returns>µ±Ç°Ò³ÃæµÄÃû³Æ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetParamCount">
+            <summary>
+            ·µ»Ø±íµ¥»òUrl²ÎÊýµÄ×Ü¸öÊý
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetFormString(System.String)">
+            <summary>
+            »ñµÃÖ¸¶¨±íµ¥²ÎÊýµÄÖµ
+            </summary>
+            <param name="strName">±íµ¥²ÎÊý</param>
+            <returns>±íµ¥²ÎÊýµÄÖµ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetFormString(System.String,System.Boolean)">
+            <summary>
+            »ñµÃÖ¸¶¨±íµ¥²ÎÊýµÄÖµ
+            </summary>
+            <param name="strName">±íµ¥²ÎÊý</param>
+            <param name="sqlSafeCheck">ÊÇ·ñ½øÐÐSQL°²È«¼ì²é</param>
+            <returns>±íµ¥²ÎÊýµÄÖµ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetFormIntValue(System.String)">
+            <summary>
+            ·µ»ØÖ¸¶¨±íµ¥µÄ²ÎÊýÖµ(IntÐÍ)
+            </summary>
+            <param name="strName">±íµ¥²ÎÊý</param>
+            <returns>·µ»ØÖ¸¶¨±íµ¥µÄ²ÎÊýÖµ(IntÐÍ)</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetFormIntValue(System.String,System.Int32)">
+            <summary>
+            ·µ»ØÖ¸¶¨±íµ¥µÄ²ÎÊýÖµ(IntÐÍ)
+            </summary>
+            <param name="strName">±íµ¥²ÎÊý</param>
+            <param name="defaultvalue">Ä¬ÈÏÖµ</param>
+            <returns>·µ»ØÖ¸¶¨±íµ¥µÄ²ÎÊýÖµ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetFormStringValue(System.String)">
+            <summary>
+            ·µ»ØÖ¸¶¨±íµ¥µÄ²ÎÊýÖµ(StringÐÍ)
+            </summary>
+            <param name="strName">±íµ¥²ÎÊý</param>
+            <returns>·µ»ØÖ¸¶¨±íµ¥µÄ²ÎÊýÖµ(StringÐÍ)</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetFormStringValue(System.String,System.String)">
+            <summary>
+            ·µ»ØÖ¸¶¨±íµ¥µÄ²ÎÊýÖµ(StringÐÍ)
+            </summary>
+            <param name="strName">±íµ¥²ÎÊý</param>
+            <param name="defaultvalue">Ä¬ÈÏÖµ</param>
+            <returns>·µ»ØÖ¸¶¨±íµ¥µÄ²ÎÊýÖµ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetString(System.String)">
+            <summary>
+            »ñµÃUrl»ò±íµ¥²ÎÊýµÄÖµ, ÏÈÅÐ¶ÏUrl²ÎÊýÊÇ·ñÎª¿Õ×Ö·û´®, ÈçÎªTrueÔò·µ»Ø±íµ¥²ÎÊýµÄÖµ
+            </summary>
+            <param name="strName">²ÎÊý</param>
+            <returns>Url»ò±íµ¥²ÎÊýµÄÖµ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetString(System.String,System.Boolean)">
+            <summary>
+            »ñµÃUrl»ò±íµ¥²ÎÊýµÄÖµ, ÏÈÅÐ¶ÏUrl²ÎÊýÊÇ·ñÎª¿Õ×Ö·û´®, ÈçÎªTrueÔò·µ»Ø±íµ¥²ÎÊýµÄÖµ
+            </summary>
+            <param name="strName">²ÎÊý</param>
+            <param name="sqlSafeCheck">ÊÇ·ñ½øÐÐSQL°²È«¼ì²é</param>
+            <returns>Url»ò±íµ¥²ÎÊýµÄÖµ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetStringValue(System.String,System.String)">
+            <summary>
+            »ñµÃUrl»ò±íµ¥²ÎÊýµÄÖµ, ÏÈÅÐ¶ÏUrl²ÎÊýÊÇ·ñÎª¿Õ×Ö·û´®, ÈçÎªTrueÔò·µ»Ø±íµ¥²ÎÊýµÄÖµ
+            </summary>
+            <param name="strName">²ÎÊý</param>
+            <param name="sqlSafeCheck">ÊÇ·ñ½øÐÐSQL°²È«¼ì²é</param>
+            <returns>Url»ò±íµ¥²ÎÊýµÄÖµ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetQueryInt(System.String)">
+            <summary>
+            »ñµÃÖ¸¶¨Url²ÎÊýµÄintÀàÐÍÖµ
+            </summary>
+            <param name="strName">Url²ÎÊý</param>
+            <returns>Url²ÎÊýµÄintÀàÐÍÖµ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetQueryInt(System.String,System.Int32)">
+            <summary>
+            »ñµÃÖ¸¶¨Url²ÎÊýµÄintÀàÐÍÖµ
+            </summary>
+            <param name="strName">Url²ÎÊý</param>
+            <param name="defValue">È±Ê¡Öµ</param>
+            <returns>Url²ÎÊýµÄintÀàÐÍÖµ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetFormInt(System.String)">
+            <summary>
+            »ñµÃÖ¸¶¨±íµ¥²ÎÊýµÄintÀàÐÍÖµ
+            </summary>
+            <param name="strName">±íµ¥²ÎÊý</param>
+            <returns>±íµ¥²ÎÊýµÄintÀàÐÍÖµ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetFormInt(System.String,System.Int32)">
+            <summary>
+            »ñµÃÖ¸¶¨±íµ¥²ÎÊýµÄintÀàÐÍÖµ
+            </summary>
+            <param name="strName">±íµ¥²ÎÊý</param>
+            <param name="defValue">È±Ê¡Öµ</param>
+            <returns>±íµ¥²ÎÊýµÄintÀàÐÍÖµ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetInt(System.String,System.Int32)">
+            <summary>
+            »ñµÃÖ¸¶¨Url»ò±íµ¥²ÎÊýµÄintÀàÐÍÖµ, ÏÈÅÐ¶ÏUrl²ÎÊýÊÇ·ñÎªÈ±Ê¡Öµ, ÈçÎªTrueÔò·µ»Ø±íµ¥²ÎÊýµÄÖµ
+            </summary>
+            <param name="strName">Url»ò±íµ¥²ÎÊý</param>
+            <param name="defValue">È±Ê¡Öµ</param>
+            <returns>Url»ò±íµ¥²ÎÊýµÄintÀàÐÍÖµ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetQueryDecimal(System.String,System.Decimal)">
+            <summary>
+            »ñµÃÖ¸¶¨Url²ÎÊýµÄdecimalÀàÐÍÖµ
+            </summary>
+            <param name="strName">Url²ÎÊý</param>
+            <param name="defValue">È±Ê¡Öµ</param>
+            <returns>Url²ÎÊýµÄdecimalÀàÐÍÖµ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetFormDecimal(System.String,System.Decimal)">
+            <summary>
+            »ñµÃÖ¸¶¨±íµ¥²ÎÊýµÄdecimalÀàÐÍÖµ
+            </summary>
+            <param name="strName">±íµ¥²ÎÊý</param>
+            <param name="defValue">È±Ê¡Öµ</param>
+            <returns>±íµ¥²ÎÊýµÄdecimalÀàÐÍÖµ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetQueryFloat(System.String,System.Single)">
+            <summary>
+            »ñµÃÖ¸¶¨Url²ÎÊýµÄfloatÀàÐÍÖµ
+            </summary>
+            <param name="strName">Url²ÎÊý</param>
+            <param name="defValue">È±Ê¡Öµ</param>
+            <returns>Url²ÎÊýµÄintÀàÐÍÖµ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetFormFloat(System.String,System.Single)">
+            <summary>
+            »ñµÃÖ¸¶¨±íµ¥²ÎÊýµÄfloatÀàÐÍÖµ
+            </summary>
+            <param name="strName">±íµ¥²ÎÊý</param>
+            <param name="defValue">È±Ê¡Öµ</param>
+            <returns>±íµ¥²ÎÊýµÄfloatÀàÐÍÖµ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetFloat(System.String,System.Single)">
+            <summary>
+            »ñµÃÖ¸¶¨Url»ò±íµ¥²ÎÊýµÄfloatÀàÐÍÖµ, ÏÈÅÐ¶ÏUrl²ÎÊýÊÇ·ñÎªÈ±Ê¡Öµ, ÈçÎªTrueÔò·µ»Ø±íµ¥²ÎÊýµÄÖµ
+            </summary>
+            <param name="strName">Url»ò±íµ¥²ÎÊý</param>
+            <param name="defValue">È±Ê¡Öµ</param>
+            <returns>Url»ò±íµ¥²ÎÊýµÄintÀàÐÍÖµ</returns>
+        </member>
+        <member name="M:Vincent._DTcms.DTRequest.GetIP">
+            <summary>
+            »ñµÃµ±Ç°Ò³Ãæ¿Í»§¶ËµÄIP
+            </summary>
+            <returns>µ±Ç°Ò³Ãæ¿Í»§¶ËµÄIP</returns>
+        </member>
+        <member name="T:Vincent._DTcms.PageTemplate">
+            <summary>
+            Template为页面模板类.
+            </summary>
+        </member>
+        <member name="M:Vincent._DTcms.PageTemplate.GetTemplate(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            获得模板字符串，从设置中的模板路径来读取模板文件.
+            </summary>
+            <param name="sitePath">站点目录</param>
+            <param name="tempPath">模板目录</param>
+            <param name="skinName">模板名</param>
+            <param name="templateName">模板文件的文件名称</param>
+            <param name="fromPage">源页面名称</param>
+            <param name="inherit">该页面继承的类</param>
+            <param name="buildPath">生成目录名</param>
+            <param name="nest">嵌套次数</param>
+            <returns>string值,如果失败则为"",成功则为模板内容的string</returns>
+        </member>
+        <member name="M:Vincent._DTcms.PageTemplate.ConvertTags(System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            转换标签
+            </summary>
+            <param name="nest">深度</param>
+            <param name="sitePath">站点目录</param>
+            <param name="skinName">模板名称</param>
+            <param name="inputStr">模板内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Regexlib.IsValidUserName(System.String)">
+            <summary>
+            判断字符串是否是a-zA-Z0-9_范围内（3-50位范围内）
+            </summary>
+            <param name="strIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Regexlib.IsValidEmail(System.String)">
+            <summary>
+            验证邮箱
+            </summary>
+            <param name="strIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Regexlib.IsValidMobile(System.String)">
+            <summary>
+            验证手机
+            </summary>
+            <param name="strIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Regexlib.IsValidTelPhone(System.String)">
+            <summary>
+            验证手机号
+            </summary>
+            <param name="strIn"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Vincent._DTcms.Thumbnail">
+            <summary>
+            Thumbnail µÄÕªÒªËµÃ÷¡£
+            </summary>
+        </member>
+        <member name="M:Vincent._DTcms.Thumbnail.SetImage(System.String)">
+            <summary>
+            ´´½¨
+            </summary>
+            <param name="FileName">Ô­Ê¼Í¼Æ¬Â·¾¶</param>
+        </member>
+        <member name="M:Vincent._DTcms.Thumbnail.ThumbnailCallback">
+            <summary>
+            »Øµ÷
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Thumbnail.GetImage(System.Int32,System.Int32)">
+            <summary>
+            Éú³ÉËõÂÔÍ¼,·µ»ØËõÂÔÍ¼µÄImage¶ÔÏó
+            </summary>
+            <param name="Width">ËõÂÔÍ¼¿í¶È</param>
+            <param name="Height">ËõÂÔÍ¼¸ß¶È</param>
+            <returns>ËõÂÔÍ¼µÄImage¶ÔÏó</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Thumbnail.SaveThumbnailImage(System.Int32,System.Int32)">
+            <summary>
+            ±£´æËõÂÔÍ¼
+            </summary>
+            <param name="Width"></param>
+            <param name="Height"></param>
+        </member>
+        <member name="M:Vincent._DTcms.Thumbnail.SaveImage(System.Int32,System.Int32,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Éú³ÉËõÂÔÍ¼²¢±£´æ
+            </summary>
+            <param name="Width">ËõÂÔÍ¼µÄ¿í¶È</param>
+            <param name="Height">ËõÂÔÍ¼µÄ¸ß¶È</param>
+            <param name="imgformat">±£´æµÄÍ¼Ïñ¸ñÊ½</param>
+            <returns>ËõÂÔÍ¼µÄImage¶ÔÏó</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Thumbnail.SaveImage(System.Drawing.Image,System.String,System.Drawing.Imaging.ImageCodecInfo)">
+            <summary>
+            ±£´æÍ¼Æ¬
+            </summary>
+            <param name="image">Image ¶ÔÏó</param>
+            <param name="savePath">±£´æÂ·¾¶</param>
+            <param name="ici">Ö¸¶¨¸ñÊ½µÄ±à½âÂë²ÎÊý</param>
+        </member>
+        <member name="M:Vincent._DTcms.Thumbnail.GetCodecInfo(System.String)">
+            <summary>
+            »ñÈ¡Í¼Ïñ±àÂë½âÂëÆ÷µÄËùÓÐÏà¹ØÐÅÏ¢
+            </summary>
+            <param name="mimeType">°üº¬±àÂë½âÂëÆ÷µÄ¶àÓÃÍ¾Íø¼ÊÓÊ¼þÀ©³äÐ­Òé (MIME) ÀàÐÍµÄ×Ö·û´®</param>
+            <returns>·µ»ØÍ¼Ïñ±àÂë½âÂëÆ÷µÄËùÓÐÏà¹ØÐÅÏ¢</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Thumbnail.ResizeImage(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            ¼ÆËãÐÂ³ß´ç
+            </summary>
+            <param name="width">Ô­Ê¼¿í¶È</param>
+            <param name="height">Ô­Ê¼¸ß¶È</param>
+            <param name="maxWidth">×î´óÐÂ¿í¶È</param>
+            <param name="maxHeight">×î´óÐÂ¸ß¶È</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Thumbnail.GetFormat(System.String)">
+            <summary>
+            µÃµ½Í¼Æ¬¸ñÊ½
+            </summary>
+            <param name="name">ÎÄ¼þÃû³Æ</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Thumbnail.MakeSquareImage(System.Drawing.Image,System.String,System.Int32)">
+            <summary>
+            ÖÆ×÷Ð¡Õý·½ÐÎ
+            </summary>
+            <param name="image">Í¼Æ¬¶ÔÏó</param>
+            <param name="newFileName">ÐÂµØÖ·</param>
+            <param name="newSize">³¤¶È»ò¿í¶È</param>
+        </member>
+        <member name="M:Vincent._DTcms.Thumbnail.MakeSquareImage(System.String,System.String,System.Int32)">
+            <summary>
+            ÖÆ×÷Ð¡Õý·½ÐÎ
+            </summary>
+            <param name="fileName">Í¼Æ¬ÎÄ¼þÃû</param>
+            <param name="newFileName">ÐÂµØÖ·</param>
+            <param name="newSize">³¤¶È»ò¿í¶È</param>
+        </member>
+        <member name="M:Vincent._DTcms.Thumbnail.MakeRemoteSquareImage(System.String,System.String,System.Int32)">
+            <summary>
+            ÖÆ×÷Ô¶³ÌÐ¡Õý·½ÐÎ
+            </summary>
+            <param name="url">Í¼Æ¬url</param>
+            <param name="newFileName">ÐÂµØÖ·</param>
+            <param name="newSize">³¤¶È»ò¿í¶È</param>
+        </member>
+        <member name="M:Vincent._DTcms.Thumbnail.MakeThumbnailImage(System.Drawing.Image,System.String,System.Int32,System.Int32)">
+            <summary>
+            ÖÆ×÷ËõÂÔÍ¼
+            </summary>
+            <param name="original">Í¼Æ¬¶ÔÏó</param>
+            <param name="newFileName">ÐÂÍ¼Â·¾¶</param>
+            <param name="maxWidth">×î´ó¿í¶È</param>
+            <param name="maxHeight">×î´ó¸ß¶È</param>
+        </member>
+        <member name="M:Vincent._DTcms.Thumbnail.MakeThumbnailImage(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            ÖÆ×÷ËõÂÔÍ¼
+            </summary>
+            <param name="fileName">ÎÄ¼þÃû</param>
+            <param name="newFileName">ÐÂÍ¼Â·¾¶</param>
+            <param name="maxWidth">×î´ó¿í¶È</param>
+            <param name="maxHeight">×î´ó¸ß¶È</param>
+        </member>
+        <member name="M:Vincent._DTcms.Thumbnail.MakeThumbnailImage(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            Éú³ÉËõÂÔÍ¼
+            </summary>
+            <param name="fileName">Ô´Í¼Â·¾¶£¨¾ø¶ÔÂ·¾¶£©</param>
+            <param name="newFileName">ËõÂÔÍ¼Â·¾¶£¨¾ø¶ÔÂ·¾¶£©</param>
+            <param name="width">ËõÂÔÍ¼¿í¶È</param>
+            <param name="height">ËõÂÔÍ¼¸ß¶È</param>
+            <param name="mode">Éú³ÉËõÂÔÍ¼µÄ·½Ê½</param>    
+        </member>
+        <member name="M:Vincent._DTcms.Thumbnail.MakeThumbnailImage(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            ²Ã¼ôÍ¼Æ¬²¢±£´æ
+            </summary>
+            <param name="fileName">Ô´Í¼Â·¾¶£¨¾ø¶ÔÂ·¾¶£©</param>
+            <param name="newFileName">ËõÂÔÍ¼Â·¾¶£¨¾ø¶ÔÂ·¾¶£©</param>
+            <param name="maxWidth">ËõÂÔÍ¼¿í¶È</param>
+            <param name="maxHeight">ËõÂÔÍ¼¸ß¶È</param>
+            <param name="cropWidth">²Ã¼ô¿í¶È</param>
+            <param name="cropHeight">²Ã¼ô¸ß¶È</param>
+            <param name="X">XÖá</param>
+            <param name="Y">YÖá</param>
+        </member>
+        <member name="M:Vincent._DTcms.Thumbnail.MakeRemoteThumbnailImage(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            ÖÆ×÷Ô¶³ÌËõÂÔÍ¼
+            </summary>
+            <param name="url">Í¼Æ¬URL</param>
+            <param name="newFileName">ÐÂÍ¼Â·¾¶</param>
+            <param name="maxWidth">×î´ó¿í¶È</param>
+            <param name="maxHeight">×î´ó¸ß¶È</param>
+        </member>
+        <member name="M:Vincent._DTcms.Thumbnail.GetRemoteImage(System.String)">
+            <summary>
+            »ñÈ¡Í¼Æ¬Á÷
+            </summary>
+            <param name="url">Í¼Æ¬URL</param>
+            <returns></returns>
+        </member>
+        <member name="T:Vincent._DTcms.Utils.VersionInfo">
+            <summary>
+            版本信息类
+            </summary>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.IsNumeric(System.Object)">
+            <summary>
+            判断对象是否为Int32类型的数字
+            </summary>
+            <param name="Expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.IsNumeric(System.String)">
+            <summary>
+            判断对象是否为Int32类型的数字
+            </summary>
+            <param name="Expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.IsDouble(System.Object)">
+            <summary>
+            是否为Double类型
+            </summary>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.IsValidEmail(System.String)">
+            <summary>
+            检测是否符合email格式
+            </summary>
+            <param name="strEmail">要判断的email字符串</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.IsURL(System.String)">
+            <summary>
+            检测是否是正确的Url
+            </summary>
+            <param name="strUrl">要验证的Url</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.GetStrArray(System.String)">
+            <summary>
+            将字符串转换为数组
+            </summary>
+            <param name="str">字符串</param>
+            <returns>字符串数组</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.GetArrayStr(System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            将数组转换为字符串
+            </summary>
+            <param name="list">List</param>
+            <param name="speater">分隔符</param>
+            <returns>String</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.StrToBool(System.Object,System.Boolean)">
+            <summary>
+            object型转换为bool型
+            </summary>
+            <param name="strValue">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的bool类型结果</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.StrToBool(System.String,System.Boolean)">
+            <summary>
+            string型转换为bool型
+            </summary>
+            <param name="strValue">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的bool类型结果</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.ObjToInt(System.Object,System.Int32)">
+            <summary>
+            将对象转换为Int32类型
+            </summary>
+            <param name="expression">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.StrToInt(System.String,System.Int32)">
+            <summary>
+            将字符串转换为Int32类型
+            </summary>
+            <param name="expression">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.ObjToDecimal(System.Object,System.Decimal)">
+            <summary>
+            Object型转换为decimal型
+            </summary>
+            <param name="strValue">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的decimal类型结果</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.StrToDecimal(System.String,System.Decimal)">
+            <summary>
+            string型转换为decimal型
+            </summary>
+            <param name="strValue">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的decimal类型结果</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.ObjToFloat(System.Object,System.Single)">
+            <summary>
+            Object型转换为float型
+            </summary>
+            <param name="strValue">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.StrToFloat(System.String,System.Single)">
+            <summary>
+            string型转换为float型
+            </summary>
+            <param name="strValue">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.StrToDateTime(System.String,System.DateTime)">
+            <summary>
+            将对象转换为日期时间类型
+            </summary>
+            <param name="str">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.StrToDateTime(System.String)">
+            <summary>
+            将对象转换为日期时间类型
+            </summary>
+            <param name="str">要转换的字符串</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.ObjectToDateTime(System.Object)">
+            <summary>
+            将对象转换为日期时间类型
+            </summary>
+            <param name="obj">要转换的对象</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.ObjectToDateTime(System.Object,System.DateTime)">
+            <summary>
+            将对象转换为日期时间类型
+            </summary>
+            <param name="obj">要转换的对象</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.ObjectToStr(System.Object)">
+            <summary>
+            将对象转换为字符串
+            </summary>
+            <param name="obj">要转换的对象</param>
+            <returns>转换后的string类型结果</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.SplitString(System.String,System.String)">
+            <summary>
+            分割字符串
+            </summary>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.SplitString(System.String,System.String,System.Int32)">
+            <summary>
+            分割字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.DelLastComma(System.String)">
+            <summary>
+            删除最后结尾的一个逗号
+            </summary>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.DelLastChar(System.String,System.String)">
+            <summary>
+            删除最后结尾的指定字符后的字符
+            </summary>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.StringOfChar(System.Int32,System.String)">
+            <summary>
+            生成指定长度的字符串,即生成strLong个str字符串
+            </summary>
+            <param name="strLong">生成的长度</param>
+            <param name="str">以str生成字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.GetRamCode">
+            <summary>
+            生成日期随机码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.Number(System.Int32)">
+            <summary>
+            生成随机数字
+            </summary>
+            <param name="length">生成长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.Number(System.Int32,System.Boolean)">
+            <summary>
+            生成随机数字
+            </summary>
+            <param name="Length">生成长度</param>
+            <param name="Sleep">是否要在生成前将当前线程阻止以避免重复</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.GetCheckCode(System.Int32)">
+            <summary>
+            生成随机字母字符串(数字字母混和)
+            </summary>
+            <param name="codeCount">待生成的位数</param>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.GetOrderNumber">
+            <summary>
+            根据日期和随机码生成订单号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.CutString(System.String,System.Int32)">
+            <summary>
+            截取字符长度
+            </summary>
+            <param name="inputString">字符</param>
+            <param name="len">长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.ToHtml(System.String)">
+            <summary>
+            字符串字符处理
+            </summary>
+            <param name="chr">等待处理的字符串</param>
+            <returns>处理后的字符串</returns>
+            //把TXT代码转换成HTML格式
+        </member>
+        <member name="M:Vincent._DTcms.Utils.ToTxt(System.String)">
+            <summary>
+            字符串字符处理
+            </summary>
+            <param name="chr">等待处理的字符串</param>
+            <returns>处理后的字符串</returns>
+            //把HTML代码转换成TXT格式
+        </member>
+        <member name="M:Vincent._DTcms.Utils.IsSafeSqlString(System.String)">
+            <summary>
+            检测是否有Sql危险字符
+            </summary>
+            <param name="str">要判断字符串</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.Filter(System.String)">
+            <summary>
+            检查危险字符
+            </summary>
+            <param name="Input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.SqlFilter(System.String,System.String)">
+            <summary> 
+            检查过滤设定的危险字符
+            </summary> 
+            <param name="InText">要过滤的字符串 </param> 
+            <returns>如果参数存在不安全字符，则返回true </returns> 
+        </member>
+        <member name="M:Vincent._DTcms.Utils.Htmls(System.String)">
+            <summary>
+            过滤特殊字符
+            </summary>
+            <param name="Input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.IsIP(System.String)">
+            <summary>
+            是否为ip
+            </summary>
+            <param name="ip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.GetMapPath(System.String)">
+            <summary>
+            获得当前绝对路径
+            </summary>
+            <param name="strPath">指定的路径</param>
+            <returns>绝对路径</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.DeleteFile(System.String)">
+            <summary>
+            删除单个文件
+            </summary>
+            <param name="_filepath">文件相对路径</param>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.DeleteUpFile(System.String)">
+            <summary>
+            删除上传的文件(及缩略图)
+            </summary>
+            <param name="_filepath"></param>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.DeleteDirectory(System.String)">
+            <summary>
+            删除指定文件夹
+            </summary>
+            <param name="_dirpath">文件相对路径</param>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.MoveDirectory(System.String,System.String)">
+            <summary>
+            修改指定文件夹名称
+            </summary>
+            <param name="old_dirpath">旧相对路径</param>
+            <param name="new_dirpath">新相对路径</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.GetFileSize(System.String)">
+            <summary>
+            返回文件大小KB
+            </summary>
+            <param name="_filepath">文件相对路径</param>
+            <returns>int</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.GetFileExt(System.String)">
+            <summary>
+            返回文件扩展名，不含“.”
+            </summary>
+            <param name="_filepath">文件全名称</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.GetFileName(System.String)">
+            <summary>
+            返回文件名，不含路径
+            </summary>
+            <param name="_filepath">文件相对路径</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.FileExists(System.String)">
+            <summary>
+            文件是否存在
+            </summary>
+            <param name="_filepath">文件相对路径</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.GetDomainStr(System.String,System.String)">
+            <summary>
+            获得远程字符串
+            </summary>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.WriteCookie(System.String,System.String)">
+            <summary>
+            写cookie值
+            </summary>
+            <param name="strName">名称</param>
+            <param name="strValue">值</param>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.WriteCookie(System.String,System.String,System.String)">
+            <summary>
+            写cookie值
+            </summary>
+            <param name="strName">名称</param>
+            <param name="strValue">值</param>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.WriteCookie(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            写cookie值
+            </summary>
+            <param name="strName">名称</param>
+            <param name="strValue">值</param>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.WriteCookie(System.String,System.String,System.Int32)">
+            <summary>
+            写cookie值
+            </summary>
+            <param name="strName">名称</param>
+            <param name="strValue">值</param>
+            <param name="strValue">过期时间(分钟)</param>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.GetCookie(System.String)">
+            <summary>
+            读cookie值
+            </summary>
+            <param name="strName">名称</param>
+            <returns>cookie值</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.GetCookie(System.String,System.String)">
+            <summary>
+            读cookie值
+            </summary>
+            <param name="strName">名称</param>
+            <returns>cookie值</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.ReplaceStr(System.String,System.String,System.String)">
+            <summary>
+            替换指定的字符串
+            </summary>
+            <param name="originalStr">原字符串</param>
+            <param name="oldStr">旧字符串</param>
+            <param name="newStr">新字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.OutPageList(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            前端ajax无刷新分页（新增）
+            </summary>
+            <param name="pageSize">页面大小</param>
+            <param name="pageIndex">当前页</param>
+            <param name="totalCount">总记录数</param>
+            <param name="centSize">中间页码数量</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.OutPageList(System.Int32,System.Int32,System.Int32,System.String,System.Int32)">
+            <summary>
+            返回分页页码（原有）
+            </summary>
+            <param name="pageSize">页面大小</param>
+            <param name="pageIndex">当前页</param>
+            <param name="totalCount">总记录数</param>
+            <param name="linkUrl">链接地址，__id__代表页码</param>
+            <param name="centSize">中间页码数量</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.OutPageList1(System.Int32,System.Int32,System.Int32,System.String,System.Int32)">
+            <summary>
+            返回分页页码
+            </summary>
+            <param name="pageSize">页面大小</param>
+            <param name="pageIndex">当前页</param>
+            <param name="totalCount">总记录数</param>
+            <param name="linkUrl">链接地址，__id__代表页码</param>
+            <param name="centSize">中间页码数量</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.UrlEncode(System.String)">
+            <summary>
+            URL字符编码
+            </summary>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.UrlDecode(System.String)">
+            <summary>
+            URL字符解码
+            </summary>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.CombUrlTxt(System.String,System.String,System.String[])">
+            <summary>
+            组合URL参数
+            </summary>
+            <param name="_url">页面地址</param>
+            <param name="_keys">参数名称</param>
+            <param name="_values">参数值</param>
+            <returns>String</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.HttpPost(System.String,System.String)">
+            <summary>
+            HTTP POST方式请求数据
+            </summary>
+            <param name="url">URL.</param>
+            <param name="param">POST的数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.HttpGet(System.String)">
+            <summary>
+            HTTP GET方式请求数据.
+            </summary>
+            <param name="url">URL.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.UrlExecute(System.String)">
+            <summary>
+            执行URL获取页面内容
+            </summary>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.ActionType">
+            <summary>
+            获取操作权限
+            </summary>
+            <returns>Dictionary</returns>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.GetUrlExtension(System.String,System.String)">
+            <summary>
+            替换扩展名
+            </summary>
+        </member>
+        <member name="M:Vincent._DTcms.Utils.GetUrlExtension(System.String,System.String,System.Boolean)">
+            <summary>
+            替换扩展名，如没有扩展名替换默认首页
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Vincent._DTcms.Utils.IListToTable``1(System.Collections.Generic.IList{``0})" -->
+        <member name="M:Vincent._DTcms.Utils.ConvertIListToList``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            将IList接口泛型转为List泛型类型
+            </summary>
+            <typeparam name="T">指定的集合中泛型的类型</typeparam>
+            <param name="gbList">需要转换的IList</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DTcms.WaterMark.AddImageSignPic(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            图片水印
+            </summary>
+            <param name="imgPath">服务器图片相对路径</param>
+            <param name="filename">保存文件名</param>
+            <param name="watermarkFilename">水印文件相对路径</param>
+            <param name="watermarkStatus">图片水印位置 0=不使用 1=左上 2=中上 3=右上 4=左中  9=右下</param>
+            <param name="quality">附加水印图片质量,0-100</param>
+            <param name="watermarkTransparency">水印的透明度 1--10 10为不透明</param>
+        </member>
+        <member name="M:Vincent._DTcms.WaterMark.AddImageSignText(System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.Int32)">
+            <summary>
+            文字水印
+            </summary>
+            <param name="imgPath">服务器图片相对路径</param>
+            <param name="filename">保存文件名</param>
+            <param name="watermarkText">水印文字</param>
+            <param name="watermarkStatus">图片水印位置 0=不使用 1=左上 2=中上 3=右上 4=左中  9=右下</param>
+            <param name="quality">附加水印图片质量,0-100</param>
+            <param name="fontname">字体</param>
+            <param name="fontsize">字体大小</param>
+        </member>
+        <member name="T:Vincent._DTcms.PagingHelper">
+            <summary>  
+            双TOP二分法生成分页SQL类(支持MSSQL、ACCESS)
+            </summary> 
+        </member>
+        <member name="M:Vincent._DTcms.PagingHelper.CreatePagingSql(System.Int32,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            获取分页SQL语句，排序字段需要构成唯一记录
+            </summary>
+            <param name="_recordCount">记录总数</param>
+            <param name="_pageSize">每页记录数</param>
+            <param name="_pageIndex">当前页数</param>
+            <param name="_safeSql">SQL查询语句</param>
+            <param name="_orderField">排序字段，多个则用“,”隔开</param>
+            <returns>分页SQL语句</returns>
+        </member>
+        <member name="M:Vincent._DTcms.PagingHelper.CreateTopnSql(System.Int32,System.String)">
+            <summary>
+            获取记录总数SQL语句
+            </summary>
+            <param name="_n">限定记录数</param>
+            <param name="_safeSql">SQL查询语句</param>
+            <returns>记录总数SQL语句</returns>
+        </member>
+        <member name="M:Vincent._DTcms.PagingHelper.CreateCountingSql(System.String)">
+            <summary>
+            获取记录总数SQL语句
+            </summary>
+            <param name="_safeSql">SQL查询语句</param>
+            <returns>记录总数SQL语句</returns>
+        </member>
+        <member name="T:Vincent._Excel.InputExcel">
+            <summary>
+            Excel数据导入
+            </summary>
+        </member>
+        <member name="T:Vincent._Excel.OutputCsv">
+            <summary>
+            数据导出为 Csv 文件
+            </summary>
+        </member>
+        <member name="M:Vincent._Excel.OutputCsv.DataTableToCvsAndDownload(System.Data.DataTable,System.String)">
+            <summary>
+            将结果集导出为Csv文件并下载
+            </summary>
+            <param name="dt"> 结果集 </param>
+            <param name="FileName"> 文件名 </param>
+        </member>
+        <member name="T:Vincent._Excel.OutputExcel">
+            <summary>
+            数据导出到Excel
+            </summary>
+        </member>
+        <member name="M:Vincent._Excel.OutputExcel.DataTableToExcelAndDownload(System.Data.DataTable,System.String)">
+            <summary>
+            将结果集导出为Excel并下载
+            </summary>
+            <param name="dt"> 结果集 </param>
+            <param name="FileName"> 导出文件的文件名 </param>
+        </member>
+        <member name="M:Vincent._Excel.OutputExcel.DataTableToExcelAndDownload(System.Data.DataTable,System.String,System.String[])">
+            <summary>
+            将结果集导出为Excel并下载，且自定义字段名
+            </summary>
+            <param name="dt"> 由 DataSet 导出 Excel ，自定义字段名 </param>
+            <param name="FileName"> 导出文件的文件名 </param>
+            <param name="cells"> 字段名 </param>
+        </member>
+        <member name="M:Vincent._Excel.OutputExcel.DownloadFile(System.Web.HttpRequest,System.Web.HttpResponse,System.String,System.String,System.Int64)">
+            <summary>
+            下载服务器端的文件到本地
+            </summary>
+            <param name="_Request"> </param>
+            <param name="_Response"> </param>
+            <param name="_fileName"> 目的文件名称 </param>
+            <param name="_fullPath"> 源文件路径 </param>
+            <param name="_speed"> 速度大小(1024000 -> 10k/s) </param>        
+        </member>
+        <member name="T:Vincent._Expressage">
+            <summary>
+            处理请求第三方API  例如 请求快递API 
+            </summary>     
+        </member>
+        <member name="T:Vincent._Expressage.JuHe_TypeEnum">
+            <summary>
+            快递公司
+            </summary>
+        </member>
+        <member name="F:Vincent._Expressage.JuHe_TypeEnum.sf">
+            <summary>
+            顺丰
+            </summary>
+        </member>
+        <member name="F:Vincent._Expressage.JuHe_TypeEnum.sto">
+            <summary>
+            申通
+            </summary>
+        </member>
+        <member name="F:Vincent._Expressage.JuHe_TypeEnum.yt">
+            <summary>
+            圆通
+            </summary>
+        </member>
+        <member name="F:Vincent._Expressage.JuHe_TypeEnum.yd">
+            <summary>
+            韵达
+            </summary>
+        </member>
+        <member name="F:Vincent._Expressage.JuHe_TypeEnum.tt">
+            <summary>
+            天天
+            </summary>
+        </member>
+        <member name="F:Vincent._Expressage.JuHe_TypeEnum.ems">
+            <summary>
+            EMS
+            </summary>
+        </member>
+        <member name="F:Vincent._Expressage.JuHe_TypeEnum.zto">
+            <summary>
+            中通
+            </summary>
+        </member>
+        <member name="F:Vincent._Expressage.JuHe_TypeEnum.ht">
+            <summary>
+            汇通
+            </summary>
+        </member>
+        <member name="F:Vincent._Expressage.JuHe_TypeEnum.qf">
+            <summary>
+            全峰
+            </summary>
+        </member>
+        <member name="F:Vincent._Expressage.JuHe_TypeEnum.db">
+            <summary>
+            德邦
+            </summary>
+        </member>
+        <member name="M:Vincent._Expressage.JuHe_QueryExpressageByNo(Vincent._Expressage.JuHe_TypeEnum,System.String)">
+            <summary>
+            查询出快递详情信息 (第三方聚合数据接口)
+            </summary>
+            <param name="type">快递公司类型</param>
+            <param name="no">快递单号</param>
+            <returns>返回Json数据</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Vincent._Expressage.JuHe_QueryExpressageByNo(System.String)" -->
+        <member name="T:Vincent._MobileMessage">
+            <summary>
+            手机短信
+            </summary>
+        </member>
+        <member name="M:Vincent._MobileMessage.SendMessage(System.String,System.String)">
+            <summary>
+            发送短信 (web.config需要配置  <add key="message_url" value="http://sms-cly.cn/smsSend.do"/><add key="message_name" value="clydyd"/><add key="message_pwd" value="hb4z9wxz"/>)
+            </summary>
+            <param name="content">要发的内容格式 如：尊敬的客户,短信验证码为num,请在10分钟之内使用.【百新谷网络科技】"</param>
+            <param name="mobile">发给哪个手机号 如 15919469430</param>        
+            <returns>>0	成功,系统生成的任务id或自定义的任务id  0失败  -1用户名或者密码不正确 -2必填选项为空 -3短信内容0个字节 
+            -4 0个有效号码 -5	余额不够 -10用户被禁用 -11短信内容超过500字 -12	无扩展权限（ext字段需填空） -13	IP校验错误 -14	内容解析异常  -990	未知错误</returns>
+        </member>
+        <member name="M:Vincent._MobileMessage.SendMessageCode(System.String,System.String)">
+            <summary>
+            发送短信验证码 (web.config需要配置  <add key="message_url" value="http://sms-cly.cn/smsSend.do"/><add key="message_name" value="clydyd"/><add key="message_pwd" value="hb4z9wxz"/><add key="message_content" value="尊敬的客户,短信验证码为num,请在10分钟之内使用.【百新谷网络科技】"/>)
+            </summary>
+            <param name="codeNum">验证码 如 2236 </param>
+            <param name="mobile">发给哪个手机号 如 15919469430</param>        
+            <returns>>0	成功,系统生成的任务id或自定义的任务id  0失败  -1用户名或者密码不正确 -2必填选项为空 -3短信内容0个字节 
+            -4 0个有效号码 -5	余额不够 -10用户被禁用 -11短信内容超过500字 -12	无扩展权限（ext字段需填空） -13	IP校验错误 -14	内容解析异常  -990	未知错误</returns>
+        </member>
+        <member name="M:Vincent._MobileMessage.SendMessageCodeCheck(System.String)">
+            <summary>
+            校验发送的验证码是否正确
+            </summary>
+            <param name="codeNum">客户填入的验证码</param>
+            <returns></returns>
+        </member>
+        <member name="T:Vincent._SerializationHelper">
+            <summary>
+            序列、反序列化
+            </summary>
+        </member>
+        <member name="M:Vincent._SerializationHelper.Load(System.Type,System.String)">
+            <summary>
+            反序列化
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="filename">文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._SerializationHelper.Save(System.Object,System.String)">
+            <summary>
+            序列化
+            </summary>
+            <param name="obj">对象</param>
+            <param name="filename">文件路径</param>
+        </member>
+        <member name="T:Vincent._Cache">
+            <summary>
+            数据缓存类
+            </summary>
+        </member>
+        <member name="M:Vincent._Cache.Clare">
+            <summary>
+            清理缓存
+            </summary>
+        </member>
+        <member name="M:Vincent._Cache.Contains(System.String)">
+            <summary>
+            判断某缓存值是否存在
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Cache.GetCache(System.String)">
+            <summary>
+            获取缓存值
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Cache.GetCacheToString(System.String)">
+            <summary>
+            获取缓存值且转换为字符串类型
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Cache.Remove(System.String)">
+            <summary>
+            移除某缓存值
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:Vincent._Cache.SetCache(System.String,System.Object,System.Int32)">
+            <summary>
+            设置缓存值
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="seconds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Cache.Insert(System.String,System.Object)">
+            <summary>
+            创建缓存项的文件
+            </summary>
+            <param name="key">缓存Key</param>
+            <param name="obj">object对象</param>
+        </member>
+        <member name="M:Vincent._Cache.Insert(System.String,System.Object,System.String)">
+            <summary>
+            创建缓存项的文件依赖
+            </summary>
+            <param name="key">缓存Key</param>
+            <param name="obj">object对象</param>
+            <param name="fileName">文件绝对路径</param>
+        </member>
+        <member name="M:Vincent._Cache.Insert(System.String,System.Object,System.Int32)">
+            <summary>
+            创建缓存项过期
+            </summary>
+            <param name="key">缓存Key</param>
+            <param name="obj">object对象</param>
+            <param name="expires">过期时间(分钟)</param>
+        </member>
+        <member name="M:Vincent._Cache.Get(System.String)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="key">缓存Key</param>
+            <returns>object对象</returns>
+        </member>
+        <member name="M:Vincent._Cache.Get``1(System.String)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <typeparam name="T">T对象</typeparam>
+            <param name="key">缓存Key</param>
+            <returns></returns>
+        </member>
+        <member name="T:Vincent._Convert">
+            <summary>
+            类型转换
+            </summary>
+        </member>
+        <member name="M:Vincent._Convert.ToInt64(System.String)">
+            <summary>
+            字符串转换为64位长整型
+            </summary>
+            <param name="Value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Convert.ToInt64(System.String,System.Int64)">
+            <summary>
+            字符串转换为64位长整型
+            </summary>
+            <param name="Value"> 需要转换的字符串 </param>
+            <param name="DefaultValue"> 默认值 </param>
+            <returns> 64位长整型值 </returns>
+        </member>
+        <member name="M:Vincent._Convert.ToInt(System.String)">
+            <summary>
+            字符串转换为32位长整型
+            </summary>
+            <param name="Value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Convert.ToInt(System.String,System.Int32)">
+            <summary>
+            字符串转换为32位长整型
+            </summary>
+            <param name="Value"> 需要转换的字符串 </param>
+            <param name="DefaultValue"> 默认值 </param>
+            <returns> 32位长整型值 </returns>
+        </member>
+        <member name="M:Vincent._Convert.ToFloat(System.String)">
+            <summary>
+            字符串转换为float型
+            </summary>
+            <param name="Value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Convert.ToFloat(System.String,System.Single)">
+            <summary>
+            字符串转换为float型
+            </summary>
+            <param name="Value"> 需要转换的字符串 </param>
+            <param name="DefaultValue"> 默认值 </param>
+            <returns> 32位长整型值 </returns>
+        </member>
+        <member name="M:Vincent._Convert.ToDouble(System.String)">
+            <summary>
+            字符串转换为double型
+            </summary>
+            <param name="Value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Convert.ToDouble(System.String,System.Double)">
+            <summary>
+            字符串转换为double型
+            </summary>
+            <param name="Value"> 需要转换的字符串 </param>
+            <param name="DefaultValue"> 默认值 </param>
+            <returns> 32位长整型值 </returns>
+        </member>
+        <member name="M:Vincent._Convert.ToDateTime(System.String)">
+            <summary>
+            字符串转换为时间类型
+            </summary>
+            <param name="Value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Convert.ToDateTime(System.String,System.DateTime)">
+            <summary>
+            字符串转换为时间类型
+            </summary>
+            <param name="Value"></param>
+            <param name="datetime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Convert.ToDecimal(System.String)">
+            <summary>
+            字符串转换为 decimal 类型
+            </summary>
+            <param name="Value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Convert.ToDecimal(System.String,System.Decimal)">
+            <summary>
+            字符串转换为 decimal 类型
+            </summary>
+            <param name="Value"></param>
+            <param name="defvalue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Convert.ToBool(System.String)">
+            <summary>
+            字符串转换为 Boolean 型
+            </summary>
+            <param name="Value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Convert.ToBool(System.String,System.Boolean)">
+            <summary>
+            字符串转换为 Boolean 型
+            </summary>
+            <param name="Value"> 需要转换的字符串 </param>
+            <param name="DefaultValue"> 默认值 </param>
+            <returns> true false </returns>
+        </member>
+        <member name="T:Vincent._Cookie">
+            <summary>
+            Cookie有关操作
+            </summary>
+        </member>
+        <member name="M:Vincent._Cookie.SetCookie(System.String,System.String,System.Int32)">
+            <summary>
+            保存 Cookie 值
+            </summary>
+            <param name="strName"> cookie名 </param>
+            <param name="strValue"> 要保存的值 </param>
+            <param name="strDay"> 保存时间(单位：天) </param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Cookie.GetCookie(System.String)">
+            <summary>
+            获取 Cookie 值
+            </summary>
+            <param name="strName"> cookie名 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Cookie.DelCookie(System.String)">
+            <summary>
+            删除 Cookie 值
+            </summary>
+            <param name="strName"> cookie名 </param>
+            <returns></returns>
+        </member>
+        <member name="T:Vincent._Database">
+            <summary>
+            数据库操作类
+            </summary>
+        </member>
+        <member name="F:Vincent._Database.Connection">
+            <summary>
+            数据库连接对象
+            </summary>
+        </member>
+        <member name="M:Vincent._Database.#ctor(System.String)">
+            <summary>
+            打开数据库连接
+            </summary>
+            <param name="ConnectionString"></param>
+        </member>
+        <member name="M:Vincent._Database.#ctor(System.String,System.Boolean)">
+            <summary>
+            构造函数，打开数据库连接，检查是否已连接
+            </summary>
+            <param name="ConnectionString"></param>
+            <param name="IsConn"></param>
+        </member>
+        <member name="M:Vincent._Database.#ctor(System.String,System.Boolean,System.Boolean@)">
+            <summary>
+            构造函数，打开数据库连接，检查是否已连接，返回是否连接成功
+            </summary>
+            <param name="ConnectionString"></param>
+            <param name="IsConn"></param>
+            <param name="isOpen"></param>
+        </member>
+        <member name="M:Vincent._Database.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="db_host"></param>
+            <param name="db_user"></param>
+            <param name="db_password"></param>
+            <param name="db_name"></param>
+        </member>
+        <member name="M:Vincent._Database.ClarePools">
+            <summary>
+            清理连接池
+            </summary>
+        </member>
+        <member name="M:Vincent._Database.close">
+            <summary>
+            关闭数据库连接
+            </summary>
+        </member>
+        <member name="M:Vincent._Database.ExecuteSql(System.String)">
+            <summary>
+            执行SQL语句，返回影响的记录数
+            </summary>
+            <param name="SQLString">SQL语句</param>
+            <returns>影响的记录数</returns>
+        </member>
+        <member name="M:Vincent._Database.Query(System.String)">
+            <summary>
+            执行sql,返回结果集
+            </summary>
+            <param name="SQLString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Database.Query(System.String,System.Int32)">
+            <summary>
+             执行sql限定超时时间,返回结果集
+            </summary>
+            <param name="SQLString"></param>
+            <param name="Times"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Database.execute_procedure(System.String)">
+            <summary>
+            执行存储过程
+            </summary>
+            <param name="ProcedureName"> 过程名 </param>
+        </member>
+        <member name="M:Vincent._Database.execute_procedure(System.String,System.Collections.Generic.List{System.Data.SqlClient.SqlParameter})">
+            <summary>
+            执行存储过程
+            </summary>
+            <param name="ProcedureName"> 过程名 </param>
+            <param name="parameters"> 泛型参数集 </param>
+        </member>
+        <member name="M:Vincent._Database.execute_procedure(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行存储过程
+            </summary>
+            <param name="ProcedureName"> 过程名 </param>
+            <param name="parameters"> 参数集 </param>
+        </member>
+        <member name="M:Vincent._Database.execute_procedure_stone(System.String,System.Data.SqlClient.SqlParameter[],System.String@)">
+            <summary>
+            执行存储过程
+            </summary>
+            <param name="ProcedureName"> 过程名 </param>
+            <param name="parameters"> 参数集 </param>
+            <param name="errormsg"> 错误信息 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Database.fetch_procedure(System.String)">
+            <summary>
+            执行存储过程，带返回值
+            </summary>
+            <param name="ProcedureName"> 过程名 </param>
+        </member>
+        <member name="M:Vincent._Database.fetch_procedure(System.String,System.Collections.Generic.List{System.Data.SqlClient.SqlParameter})">
+            <summary>
+            执行存储过程，带返回值
+            </summary>
+            <param name="ProcedureName"> 过程名 </param>
+            <param name="parameters"> 泛型参数集 </param>
+        </member>
+        <member name="M:Vincent._Database.fetch_procedure(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行存储过程，带返回值
+            </summary>
+            <param name="ProcedureName"> 过程名 </param>
+            <param name="parameters"> 泛型参数集 </param>
+        </member>
+        <member name="M:Vincent._Database.GetDataSet(System.String)">
+            <summary>
+            执行存储过程，返回DataSet
+            </summary>
+            <param name="ProcedureName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Database.GetDataSet(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行存储过程，返回DataSet
+            </summary>
+            <param name="ProcedureName"> 过程名 </param>
+            <param name="parameters"> 参数集 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Database.GetDataTable(System.String)">
+            <summary>
+            执行存储过程，返回DataTable
+            </summary>
+            <param name="ProcedureName"> 过程名 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Database.GetDataTable(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行存储过程，返回DataTable
+            </summary>
+            <param name="ProcedureName"> 过程名 </param>
+            <param name="parameters"> 参数集 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Database.GetDataTable(System.String,System.Collections.Generic.List{System.Data.SqlClient.SqlParameter})">
+            <summary>
+            执行存储过程，返回DataTable
+            </summary>
+            <param name="ProcedureName"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Database.open(System.String)">
+            <summary>
+            打开连接
+            </summary>
+            <param name="ConnectionString"></param>
+        </member>
+        <member name="M:Vincent._Database.open2(System.String)">
+            <summary>
+            打开连接,返回是否成功
+            </summary>
+            <param name="ConnectionString"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Vincent._Date">
+            <summary>
+            日期操作类
+            </summary>
+        </member>
+        <member name="M:Vincent._Date.IsLastDayByMonth(System.DateTime)">
+            <summary>
+            判断某日期是否为当前月份的量后一天
+            </summary>
+            <param name="Date"> 日期 </param>
+        </member>
+        <member name="M:Vincent._Date.IsDoubleYear(System.Int32)">
+            <summary>
+            判断是否为润年
+            </summary>
+        </member>
+        <member name="M:Vincent._Date.GetEndDate(System.Int32)">
+            <summary>
+            根椐当前时间，获取时间区间为(x天)的结束时间;
+            </summary>
+            <param name="x">间隔天数</param>
+        </member>
+        <member name="M:Vincent._Date.GetDays(System.Int32)">
+            <summary>
+            根据当前日期，查询前x天的日期数，如：今天为12号且x=10 则数组结果为12,13,14...21
+            </summary>
+            <param name="x">间隔天数</param>
+        </member>
+        <member name="M:Vincent._Date.CaculateWeekDay(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            根据年月日计算星期几
+            </summary>
+            <param name="y">年</param>
+            <param name="m">月</param>
+            <param name="d">日</param>
+        </member>
+        <member name="M:Vincent._Date.GetWeek(System.Int32)">
+            <summary>
+            根据当前日期，记录各日期属于星期几
+            </summary>
+            <param name="x">间隔天数</param>
+        </member>
+        <member name="T:Vincent._DESEncrypt">
+            <summary>
+            DES加密解密
+            </summary>
+        </member>
+        <member name="M:Vincent._DESEncrypt.EncryptString(System.String)">
+            <summary>
+            加密字符串并返回加密后的结果
+            </summary>        
+        </member>
+        <member name="M:Vincent._DESEncrypt.EncryptFile(System.String,System.String)">
+            <summary>
+            加密指定的文件,如果成功返回True,否则false
+            </summary>
+            <param name="FilePath">要加密的文件路径</param>
+            <param name="OutPath">加密后的文件输出路径</param>
+        </member>
+        <member name="M:Vincent._DESEncrypt.EncryptFile(System.String)">
+            <summary>
+            文件加密函数,如果不指定输出路径,那么原来的文件将被加密后的文件覆盖
+            </summary>        
+        </member>
+        <member name="M:Vincent._DESEncrypt.DecryptString(System.String)">
+            <summary>
+            解密字符串,返回解密后的字符串
+            </summary>
+            <param name="Str">需要解密的字符串</param>
+        </member>
+        <member name="M:Vincent._DESEncrypt.DecryptFile(System.String,System.String)">
+            <summary>
+            解密指定的文件,如果成功返回True,否则false
+            </summary>
+            <param name="FilePath">要解密的文件路径</param>
+            <param name="OutPath">解密后的文件输出路径</param>
+        </member>
+        <member name="M:Vincent._DESEncrypt.DecryptFile(System.String)">
+            <summary>
+            解密文件,如果没有给出解密后文件的输出路径,则解密后的文件将覆盖先前的文件
+            </summary>
+            <param name="FilePath"></param>
+        </member>
+        <member name="M:Vincent._DESEncrypt.Encrypt(System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="Text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DESEncrypt.Encrypt(System.String,System.String)">
+            <summary> 
+            加密数据 
+            </summary> 
+            <param name="Text"></param> 
+            <param name="sKey"></param> 
+            <returns></returns> 
+        </member>
+        <member name="M:Vincent._DESEncrypt.Decrypt(System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="Text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._DESEncrypt.Decrypt(System.String,System.String)">
+            <summary> 
+            解密数据 
+            </summary> 
+            <param name="Text"></param> 
+            <param name="sKey"></param> 
+            <returns></returns> 
+        </member>
+        <member name="M:Vincent._Email.SendEmail(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary> 
+            发送邮件(只支持.net2.0以上框架) 
+            <remarks> 例子： Vincent._Email.SendEmail("LLorJJ999@163.com", "773872823@qq.com", "测试", "aadsdfds", "smtp.163.com", "LLorJJ999@163.com", "XXXXXX"); </remarks>
+            </summary> 
+            <param name="MailFrom">从哪个邮箱发送，也就是对方看见的从哪发来的</param>
+            <param name="MailTo">发到哪个邮箱</param>
+            <param name="Subject">邮件主题</param>
+            <param name="Body">邮件内容</param>
+            <param name="MailServer">发送方邮件服务器，如：stmp.163.com</param>
+            <param name="MailUserName">登录smtp主机时用到的用户名,注意是邮件地址'@'以前的部分</param>
+            <param name="MailUserPassword">发送方邮箱密码</param>
+            <returns>0:OK; -1:失败</returns>
+        </member>
+        <member name="M:Vincent._Email.SendMail(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            发送电子邮件
+            </summary>
+            <param name="MailFrom">从哪个邮箱发送，也就是对方看见的从哪发来的</param>
+            <param name="MailTo">发到哪个邮箱</param>
+            <param name="Subject">邮件主题</param>
+            <param name="Body">邮件内容</param>
+            <param name="MailServer">发送方邮件服务器，如：stmp.163.com</param>
+            <param name="MailUserName">登录smtp主机时用到的用户名,注意是邮件地址'@'以前的部分</param>
+            <param name="MailUserPassword">发送方邮箱密码</param>
+        </member>
+        <member name="T:Vincent._File">
+            <summary>
+            文件有关
+            </summary>
+        </member>
+        <member name="M:Vincent._File.SetImage(System.String)">
+            <summary>
+            创建
+            </summary>
+            <param name="FileName">原始图片路径</param>
+        </member>
+        <member name="M:Vincent._File.ThumbnailCallback">
+            <summary>
+            回调
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._File.GetImage(System.Int32,System.Int32)">
+            <summary>
+            生成缩略图,返回缩略图的Image对象
+            </summary>
+            <param name="Width">缩略图宽度</param>
+            <param name="Height">缩略图高度</param>
+            <returns>缩略图的Image对象</returns>
+        </member>
+        <member name="M:Vincent._File.SaveThumbnailImage(System.Int32,System.Int32)">
+            <summary>
+            保存缩略图
+            </summary>
+            <param name="Width"></param>
+            <param name="Height"></param>
+        </member>
+        <member name="M:Vincent._File.SaveImage(System.Int32,System.Int32,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            生成缩略图并保存
+            </summary>
+            <param name="Width">缩略图的宽度</param>
+            <param name="Height">缩略图的高度</param>
+            <param name="imgformat">保存的图像格式</param>
+            <returns>缩略图的Image对象</returns>
+        </member>
+        <member name="M:Vincent._File.SaveImage(System.Drawing.Image,System.String,System.Drawing.Imaging.ImageCodecInfo)">
+            <summary>
+            保存图片
+            </summary>
+            <param name="image">Image 对象</param>
+            <param name="savePath">保存路径</param>
+            <param name="ici">指定格式的编解码参数</param>
+        </member>
+        <member name="M:Vincent._File.GetCodecInfo(System.String)">
+            <summary>
+            获取图像编码解码器的所有相关信息
+            </summary>
+            <param name="mimeType">包含编码解码器的多用途网际邮件扩充协议 (MIME) 类型的字符串</param>
+            <returns>返回图像编码解码器的所有相关信息</returns>
+        </member>
+        <member name="M:Vincent._File.ResizeImage(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            计算新尺寸
+            </summary>
+            <param name="width">原始宽度</param>
+            <param name="height">原始高度</param>
+            <param name="maxWidth">最大新宽度</param>
+            <param name="maxHeight">最大新高度</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._File.GetFormat(System.String)">
+            <summary>
+            得到图片格式
+            </summary>
+            <param name="name">文件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._File.MakeSquareImage(System.Drawing.Image,System.String,System.Int32)">
+            <summary>
+            制作小正方形
+            </summary>
+            <param name="image">图片对象</param>
+            <param name="newFileName">新地址</param>
+            <param name="newSize">长度或宽度</param>
+        </member>
+        <member name="M:Vincent._File.MakeSquareImage(System.String,System.String,System.Int32)">
+            <summary>
+            制作小正方形
+            </summary>
+            <param name="fileName">图片文件名</param>
+            <param name="newFileName">新地址</param>
+            <param name="newSize">长度或宽度</param>
+        </member>
+        <member name="M:Vincent._File.MakeRemoteSquareImage(System.String,System.String,System.Int32)">
+            <summary>
+            制作远程小正方形
+            </summary>
+            <param name="url">图片url</param>
+            <param name="newFileName">新地址</param>
+            <param name="newSize">长度或宽度</param>
+        </member>
+        <member name="M:Vincent._File.MakeThumbnailImage(System.Drawing.Image,System.String,System.Int32,System.Int32)">
+            <summary>
+            制作缩略图
+            </summary>
+            <param name="original">图片对象</param>
+            <param name="newFileName">新图路径</param>
+            <param name="maxWidth">最大宽度</param>
+            <param name="maxHeight">最大高度</param>
+        </member>
+        <member name="M:Vincent._File.MakeThumbnailImage(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            制作缩略图
+            </summary>
+            <param name="fileName">文件名</param>
+            <param name="newFileName">新图路径</param>
+            <param name="maxWidth">最大宽度</param>
+            <param name="maxHeight">最大高度</param>
+        </member>
+        <member name="M:Vincent._File.MakeThumbnailImage(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            生成缩略图
+            </summary>
+            <param name="fileName">源图路径（绝对路径）</param>
+            <param name="newFileName">缩略图路径（绝对路径）</param>
+            <param name="width">缩略图宽度</param>
+            <param name="height">缩略图高度</param>
+            <param name="mode">生成缩略图的方式</param>    
+        </member>
+        <member name="M:Vincent._File.MakeRemoteThumbnailImage(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            制作远程缩略图
+            </summary>
+            <param name="url">图片URL</param>
+            <param name="newFileName">新图路径</param>
+            <param name="maxWidth">最大宽度</param>
+            <param name="maxHeight">最大高度</param>
+        </member>
+        <member name="M:Vincent._File.GetRemoteImage(System.String)">
+            <summary>
+            获取图片流
+            </summary>
+            <param name="url">图片URL</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._File.DeleteFile(System.String)">
+            <summary>
+            删除单个文件
+            </summary>
+            <param name="_filepath">文件相对路径</param>
+        </member>
+        <member name="M:Vincent._File.DeleteUpFile(System.String)">
+            <summary>
+            删除上传的文件(及缩略图)
+            </summary>
+            <param name="_filepath"></param>
+        </member>
+        <member name="M:Vincent._File.GetFileSize(System.String)">
+            <summary>
+            返回文件大小KB
+            </summary>
+            <param name="_filepath">文件相对路径</param>
+            <returns>int</returns>
+        </member>
+        <member name="M:Vincent._File.GetFileExt(System.String)">
+            <summary>
+            返回文件扩展名，不含“.”
+            </summary>
+            <param name="_filepath">文件名称</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Vincent._File.GetDomainStr(System.String,System.String)">
+            <summary>
+            获得远程字符串
+            </summary>
+        </member>
+        <member name="M:Vincent._JavaScript.Alert(System.Web.UI.Page,System.String)">
+            <summary>
+            弹出 JavaScript 对话框
+            </summary>
+        </member>
+        <member name="M:Vincent._JavaScript.Escape(System.String)">
+            <summary>
+            c#实现escape编码
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Vincent._Json">
+            <summary>
+            json数据
+            </summary>
+        </member>
+        <member name="F:Vincent._Json.dt">
+            <summary>
+            要转换成json的DataTable
+            </summary>
+        </member>
+        <member name="F:Vincent._Json.DateFormat">
+            <summary>
+            日期格式,默认是"yyyy-MM-dd"格式,
+            需要显示完整格式只需将该属性置为""
+            </summary>
+        </member>
+        <member name="F:Vincent._Json.IsUBB">
+            <summary>
+            是否包含UBB语法
+            </summary>
+        </member>
+        <member name="F:Vincent._Json.IsDateChange">
+            <summary>
+            是否转换时间数据 0 是 1 否
+            </summary>
+        </member>
+        <member name="M:Vincent._Json.#ctor(System.Data.DataTable)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dt"> 要转换成json的DataTable </param>
+        </member>
+        <member name="M:Vincent._Json.#ctor(System.Data.DataTable,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dt"> 要转换成json的DataTable </param>
+        </member>
+        <member name="M:Vincent._Json.#ctor(System.Data.DataTable,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dt"> 要转换成json的DataTable </param>
+            <param name="IsUBB"> 是否包含UBB语法 </param>
+        </member>
+        <member name="M:Vincent._Json.#ctor(System.Data.DataTable,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dt"> 要转换成json的DataTable </param>
+            <param name="DateFormat"> 日期格式,默认是"yyyy-MM-dd"格式,需要显示完整格式只需将该属性置为""</param>
+        </member>
+        <member name="M:Vincent._Json.#ctor(System.Data.DataTable,System.Boolean,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dt"> 要转换成json的DataTable </param>
+            <param name="IsUBB"> 是否包含UBB语法 </param>
+            <param name="DateFormat"> 日期格式,默认是"yyyy-MM-dd"格式,需要显示完整格式只需将该属性置为""</param>
+        </member>
+        <member name="M:Vincent._Json.ToJson">
+            <summary>
+            转换成json，此处转换的结果是一个json数组包括了"[]"，转换后需要加一个键
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Json.ToJsonByEasyUI">
+            <summary>
+            转换为 EasyUI 所需要的格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Json.ToJsonByEasyUI(System.String,System.String)">
+            <summary>
+            转换为 EasyUI 所需要的格式
+            </summary>
+            <param name="EntitySetName"></param>
+            <param name="Key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Json.ToJson(System.String)">
+            <summary>
+            转换为json数据
+            </summary>
+            <param name="itemvalue"> 需要过滤的数据 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Json.GetJson``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            把对象集合序列化 JSON 字符串 
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="items">对象实体</param>
+            <returns>JSON字符串</returns>
+        </member>
+        <member name="M:Vincent._Json.ParseFromJson``1(System.String)">
+            <summary>
+            获取Json的Model
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="szJson"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Json.SerializeToJson(System.Object)">
+            <summary>
+            把对象转成json字符串
+            </summary>
+            <param name="o">对象</param>
+            <returns>json字符串</returns>
+        </member>
+        <member name="M:Vincent._Json.GetJsonObject(System.String)">
+            <summary>
+            借助第三方LitJson.dll 读取Json数据
+            </summary>
+            <param name="strJson">Json格式数据</param>
+            <returns>Json对象</returns>
+        </member>
+        <member name="M:Vincent._Json.GetJsonValue(System.String,System.String)">
+            <summary>
+            借助第三方LitJson.dll 根据Key获取
+            </summary>
+            <param name="strJson">Json格式数据</param>
+            <param name="Key">Json Key</param>
+            <returns>值</returns>
+        </member>
+        <member name="T:Vincent._Log">
+            <summary>
+            系统错误操作类 (web.config需要配置  <!-- true开启日志 false关闭日志--><add key="IsDebug" value="true" />)
+            </summary>
+        </member>
+        <member name="M:Vincent._Log.SaveMessage(System.String)">
+            <summary>
+            保存异常信息到文件
+            </summary>
+            <param name="msg">错误内容</param>    
+        </member>
+        <member name="M:Vincent._Log.SaveMessage(System.String,System.String)">
+            <summary>
+            保存异常信息到文件
+            fileName目录例如：weixin/monopoly/test 取消前后斜杠，使用“/”
+            </summary>
+            <param name="fileName">文件目录例如：weixin/monopoly/test 取消前后斜杠，使用“/”</param>
+            <param name="msg"></param>
+        </member>
+        <member name="M:Vincent._Log.CreateDirectory(System.String)">
+            <summary>
+            文件目录是否存在，不存在则新建
+            </summary>
+            <param name="path"> 决对路径,如:e:soft\log\</param>
+            <returns></returns>
+        </member>
+        <member name="T:Vincent._MD5Encrypt">
+            <summary>
+            MD5加密,本加密后的信息不能返回原数据
+            </summary>
+        </member>
+        <member name="M:Vincent._MD5Encrypt.GetMD5(System.String)">
+            <summary>
+            加密成Md5
+            </summary>
+            <param name="myString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._MD5Encrypt.GetMD52(System.String)">
+            <summary>
+            普通MD5加密
+            </summary>
+            <param name="myString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._MD5Encrypt.GetMd5FromString(System.String)">
+            <summary>
+            从字符串中获取散列值
+            </summary>
+            <param name="Str">要计算散列值的字符串</param>
+        </member>
+        <member name="M:Vincent._MD5Encrypt.GetMd5FromFile(System.String)">
+            <summary>
+            从文件中获取散列值
+            </summary>
+            <param name="Str">要计算散列值的文件</param>
+        </member>
+        <member name="T:Vincent._Regex">
+            <summary>
+            正则有关
+            </summary>
+        </member>
+        <member name="M:Vincent._Regex.Regex_GetFindFrequency(System.String,System.String)">
+            <summary>
+            查询出str字符串中，出现过多少次sign子串
+            </summary>
+            <param name="str"></param>
+            <param name="sign"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Regex.Regex_GetNumToString(System.String)">
+            <summary>
+            取出字符串中的数字
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:Vincent._Regex.Regex_IsContains(System.String,System.String)">
+            <summary>
+            str字符串中，是否存在(regex)该正则的内容
+            </summary>
+        </member>
+        <member name="M:Vincent._Regex.DeUbbCode(System.String)">
+            <summary>
+            解析UBB代码
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Regex.UBBFont(System.String)">
+            <summary>
+            ubb替换
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Vincent._Request">
+            <summary>
+            web操作中的常用方法
+            </summary>
+        </member>
+        <member name="M:Vincent._Request.GetInt(System.String)">
+            <summary>
+            获取地址栏参数,且转换为整数型j
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Request.GetInt(System.String,System.Int32)">
+            <summary>
+            获取地址栏参数,且转换为整数型
+            </summary>
+            <param name="query"></param>
+            <param name="ndefault"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Request.GetInt64(System.String)">
+            <summary>
+            获取地址栏参数,且转换为长整数型
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Request.GetInt64(System.String,System.Int64)">
+            <summary>
+            获取地址栏参数,且转换为长整数型
+            </summary>
+            <param name="query"></param>
+            <param name="ldefault"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Request.GetFloat(System.String)">
+            <summary>
+            获取地址栏参数,且转换为float型
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Request.GetFloat(System.String,System.Single)">
+            <summary>
+            获取地址栏参数,且转换为float型
+            </summary>
+            <param name="query"></param>
+            <param name="ndefault"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Request.GetFloatForm(System.String)">
+            <summary>
+            获取post提交值,转换为float型
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Request.GetFloatForm(System.String,System.Single)">
+            <summary>
+            获取post提交值,转换为float型
+            </summary>
+            <param name="query"></param>
+            <param name="ndefault"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Request.GetDouble(System.String)">
+            <summary>
+            获取地址栏参数,且转换为double型
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Request.GetDouble(System.String,System.Double)">
+            <summary>
+            获取地址栏参数,且转换为double型
+            </summary>
+            <param name="query"></param>
+            <param name="ndefault"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Request.GetDoubleForm(System.String)">
+            <summary>
+            获取post提交值,转换为double型
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Request.GetDoubleForm(System.String,System.Double)">
+            <summary>
+            获取post提交值,转换为double型
+            </summary>
+            <param name="query"></param>
+            <param name="ndefault"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Request.GetString(System.String)">
+            <summary>
+            获取地址栏参数
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Request.GetString(System.String,System.String)">
+            <summary>
+            获取地址栏参数
+            </summary>
+            <param name="query"></param>
+            <param name="strdefault"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Request.GetInt64Form(System.String)">
+            <summary>
+            获取post请求值，转换为长整型
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Request.GetInt64Form(System.String,System.Int64)">
+            <summary>
+            获取post请求值，转换为长整型
+            </summary>
+            <param name="query"></param>
+            <param name="ldefault"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Request.GetIntForm(System.String)">
+            <summary>
+            获取post提交值,转换为int型
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Request.GetIntForm(System.String,System.Int32)">
+            <summary>
+            获取post提交值,转换为int型
+            </summary>
+            <param name="query"></param>
+            <param name="ndefault"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Request.GetStringForm(System.String)">
+            <summary>
+            获取post提交值
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Request.GetStringForm(System.String,System.String)">
+            <summary>
+            获取post提交值
+            </summary>
+            <param name="query"></param>
+            <param name="strdefault"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Request.GetBool(System.String)">
+            <summary>
+            获取地址栏参数,且转换为 bool 型
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Request.GetBool(System.String,System.Boolean)">
+            <summary>
+            获取地址栏参数,且转换为 bool 型
+            </summary>
+            <param name="query"></param>
+            <param name="ndefault"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Vincent._Session">
+            <summary>
+            操作Session
+            </summary>
+        </member>
+        <member name="M:Vincent._Session.SetSession(System.String,System.String)">
+            <summary>
+            保存 Session 值
+            </summary>   
+        </member>
+        <member name="M:Vincent._Session.GetSession(System.String)">
+            <summary>
+            获取 Session 值
+            </summary>
+            <param name="strName"> session名 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Session.DelSession(System.String)">
+            <summary>
+            删除 Session 值
+            </summary>
+            <param name="strName"> session名 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Session.GetSessionObject(System.String)">
+            <summary>
+            获取 Session 值
+            </summary>
+            <param name="strName"> session名 </param>
+            <returns></returns>
+        </member>
+        <member name="T:Vincent._UpLoad">
+            <summary>
+            文件上传
+            </summary>
+        </member>
+        <member name="M:Vincent._UpLoad.fileSaveAs(System.Web.HttpPostedFile,System.Boolean,System.Boolean)">
+            <summary>
+            文件上传方法A
+            </summary>
+            <param name="postedFile">文件流</param>
+            <param name="isThumbnail">是否生成缩略图</param>
+            <param name="isWater">是否打水印</param>
+            <returns>服务器文件路径</returns>
+        </member>
+        <member name="M:Vincent._UpLoad.fileSaveAs(System.Web.HttpPostedFile,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            文件上传方法B
+            </summary>
+            <param name="postedFile">文件流</param>
+            <param name="isThumbnail">是否生成缩略图</param>
+            <param name="isWater">是否打水印</param>
+            <param name="_isReOriginal">是否返回文件原名称</param>        
+            <returns>服务器文件路径</returns>
+        </member>
+        <member name="M:Vincent._UpLoad.fileSaveAs(System.Web.HttpPostedFile,System.Boolean,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            文件上传方法B
+            </summary>
+            <param name="postedFile">文件流</param>
+            <param name="isThumbnail">是否生成缩略图</param>
+            <param name="isWater">是否打水印</param>
+            <param name="_isReOriginal">是否返回文件原名称</param>
+            <param name="fileName">不包含扩展名</param>
+            <returns>服务器文件路径</returns>
+        </member>
+        <member name="M:Vincent._UpLoad.GetUpLoadPath">
+            <summary>
+            返回上传目录相对路径
+            </summary>
+            <param name="fileName">上传文件名</param>
+        </member>
+        <member name="M:Vincent._UpLoad.IsWaterMark(System.String)">
+            <summary>
+            是否需要打水印
+            </summary>
+            <param name="_fileExt">文件扩展名，不含“.”</param>
+        </member>
+        <member name="M:Vincent._UpLoad.IsImage(System.String)">
+            <summary>
+            是否为图片文件
+            </summary>
+            <param name="_fileExt">文件扩展名，不含“.”</param>
+        </member>
+        <member name="M:Vincent._UpLoad.CheckFileExt(System.String)">
+            <summary>
+            检查是否为合法的上传文件
+            </summary>
+        </member>
+        <member name="M:Vincent._UpLoad.CheckFileSize(System.String,System.Int32)">
+            <summary>
+            检查文件大小是否合法
+            </summary>
+            <param name="_fileExt">文件扩展名，不含“.”</param>
+            <param name="_fileSize">文件大小(KB)</param>
+        </member>
+        <member name="M:Vincent._Utility.GoError">
+            <summary>
+            跳转到自定义错误页(指定到系统繁忙页)
+            </summary>
+        </member>
+        <member name="M:Vincent._Utility.GoError(System.String)">
+            <summary>
+            跳转到自定义错误页
+            </summary>
+            <param name="errormsg"></param>
+        </member>
+        <member name="M:Vincent._Utility.GetIp">
+            <summary>
+            获取发起请求者IP地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Utility.GetUrl">
+            <summary>
+            获取当前页面URL值
+            </summary>        
+        </member>
+        <member name="M:Vincent._Utility.GetUrl(Vincent._Utility.UrlTypeEnum)">
+            <summary>
+            获取当前页面URL值
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Vincent._Utility.UrlTypeEnum">
+            <summary>
+            返回url类型枚举
+            </summary>
+        </member>
+        <member name="F:Vincent._Utility.UrlTypeEnum.Url">
+            <summary>
+            如：返回 http://www.test.com/testweb/default.aspx
+            </summary>
+        </member>
+        <member name="F:Vincent._Utility.UrlTypeEnum.Host">
+            <summary>
+            如：返回 www.test.com
+            </summary>
+        </member>
+        <member name="F:Vincent._Utility.UrlTypeEnum.LocalPath">
+            <summary>
+            如：返回 /testweb/default.aspx
+            </summary>
+        </member>
+        <member name="F:Vincent._Utility.UrlTypeEnum.PhysicalApplicationPath">
+            <summary>
+            如：返回 E:\WWW\testwebRequest.PhysicalPath
+            </summary>
+        </member>
+        <member name="F:Vincent._Utility.UrlTypeEnum.ApplicationPath">
+            <summary>
+            如：返回 testweb
+            </summary>
+        </member>
+        <member name="M:Vincent._Utility.UrlExistsUsingHttpWebRequest(System.String)">
+            <summary>
+            WebRequest方式判断某url是否存在
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Utility.GetWebApplicationRootPath">
+            <summary>
+            返回web应用程序根目录路径 
+            <remarks>
+            不包含bin目录
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:Vincent._Utility.GetMapPath(System.String)">
+            <summary>
+            获得当前绝对路径
+            </summary>
+            <param name="strPath">指定的路径</param>
+            <returns>绝对路径</returns>
+        </member>
+        <member name="M:Vincent._Utility.GetStringBySplit(System.String,System.Char)">
+            <summary>
+            拆分整串为字符串数据
+            </summary>
+            <param name="str"> 原串(12,14,13,15....) </param>
+            <param name="sign"> 拆分字符(',' '|'...) </param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Utility.GetPageAll(System.Int32,System.Int32)">
+            <summary>
+            获取总页数
+            </summary>
+            <param name="pagesize"> 每页显示多少 </param>
+            <param name="total"> 总记录数 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Utility.GetConfigAppSetting(System.String)">
+            <summary>
+            取config下的appsetting中的内容
+            </summary>
+        </member>
+        <member name="M:Vincent._Utility.GetFileNameByPath(System.String)">
+            <summary>
+            从一路径中获取文件名(如:lxwapct05/act/movie/1706/27000012.jar 得到 27000012.jar)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Utility.GetFileExtByPath(System.String)">
+            <summary>
+            从一路径中获取文件扩展名(如:lxwapct05/act/movie/1706/27000012.jar 得到 jar)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Utility.ConvertSize(System.Int32)">
+            <summary>
+            由字节转换成KB,MB,GB
+            </summary>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Utility.BubbleSort(System.String[],System.String[])">
+            <summary>
+            冒泡排序
+            </summary>
+            <param name="str"> 需要排序的字符串数组 </param>
+            <param name="sortStr"> 排序数 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Utility.StrToDateTime(System.String,System.DateTime)">
+            <summary>
+            字符串转换为时间类型
+            </summary>
+            <param name="Value"> 需要转换的字符串 </param>
+            <param name="DefaultValue"> 默认值 </param>
+            <returns> 时间值 </returns>
+        </member>
+        <member name="M:Vincent._Utility.Regex_GetFindFrequency(System.String,System.String)">
+            <summary>
+            查询出str字符串中，出现过多少次sign子串
+            </summary>
+            <param name="str"></param>
+            <param name="sign"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Utility.Regex_GetNumToString(System.String)">
+            <summary>
+            取出字符串中的数字
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:Vincent._Utility.Regex_IsContains(System.String,System.String)">
+            <summary>
+            str字符串中，是否存在(regex)该正则的内容
+            </summary>
+        </member>
+        <member name="M:Vincent._Utility.IndexpageReset(System.Int32)">
+            <summary>
+            释放缓存首页,初始化首页 
+            </summary>
+            <param name="classid"> 1 软件 2 游戏 </param>
+        </member>
+        <member name="M:Vincent._Utility.Net_GetFileSize(System.String)">
+            <summary>
+            远程获取文件大小
+            </summary>
+            <param name="geturl"> 远程文件地址 </param>
+            <returns>kb</returns>
+        </member>
+        <member name="T:Vincent._WebConfig">
+            <summary>
+            WebConfig文件有关
+            </summary>
+        </member>
+        <member name="M:Vincent._WebConfig.GetAppSettingsString(System.String)">
+            <summary>
+            获取 web.config 中， appSettings 下的字符串
+            </summary>
+            <param name="key"> Key </param>
+            <returns></returns>
+        </member>
+        <member name="T:Vincent._WebHttp">
+            <summary>
+            Http请求有关
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Vincent._WebHttp.HttpPost(System.String,System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:Vincent._WebHttp.HttpGet(System.String,System.String)" -->
+        <member name="M:Vincent._WebHttp.HttpGetWeixin(System.String)">
+            <summary>
+            模拟Http的get请求
+            </summary>
+            <param name="Url">链接地址</param>        
+            <returns></returns>
+        </member>
+        <member name="T:Vincent._WebHttpService">
+            <summary>
+            http连接基础类，负责底层的http通信
+            </summary>
+        </member>
+        <member name="M:Vincent._WebHttpService.Get(System.String)">
+            <summary>
+            处理http GET请求，返回数据
+            </summary>
+            <param name="url">请求的url地址</param>
+            <returns>http GET成功后返回的数据，失败抛WebException异常</returns>
+        </member>
+        <member name="T:Vincent._Xml">
+            <summary>
+            操作xml文件
+            </summary>
+        </member>
+        <member name="M:Vincent._Xml.SerializeObjToXml``1(System.Object,System.String)">
+            <summary>
+            对象序列化成xml
+            </summary>
+            <param name="sender">对象</param>
+            <param name="SavePath">生成的xml保存到</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Xml.SerializeObjToXml``1(System.Object)">
+            <summary>
+            对象序列化成XmlDocument对象
+            </summary>
+            <param name="sender">对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Xml.SerializeXmlToObj``1(System.String)">
+            <summary>
+            xml 反序列化成对象
+            </summary>
+            <typeparam name="T">对象</typeparam>
+            <param name="xmlFile">xml文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Xml.AppendChild(System.String,System.String,System.Xml.XmlNode)">
+            <summary>
+            追加节点
+            </summary>
+            <param name="filePath">XML文档绝对路径</param>
+            <param name="xPath">范例: @"Skill/First/SkillItem"</param>
+            <param name="xmlNode">XmlNode节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Xml.AppendChild(System.String,System.String,System.String,System.String)">
+            <summary>
+            从XML文档中读取节点追加到另一个XML文档中
+            </summary>
+            <param name="filePath">需要读取的XML文档绝对路径</param>
+            <param name="xPath">范例: @"Skill/First/SkillItem"</param>
+            <param name="toFilePath">被追加节点的XML文档绝对路径</param>
+            <param name="toXPath">范例: @"Skill/First/SkillItem"</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Xml.UpdateNodeInnerText(System.String,System.String,System.String)">
+            <summary>
+            修改节点的InnerText的值
+            </summary>
+            <param name="filePath">XML文件绝对路径</param>
+            <param name="xPath">范例: @"Skill/First/SkillItem"</param>
+            <param name="value">节点的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Xml.LoadXmlDoc(System.String)">
+            <summary>
+            读取XML文档
+            </summary>
+            <param name="filePath">XML文件绝对路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vincent._Xml.ReadNodes(System.String,System.String)">
+            <summary>
+            读取XML的所有子节点
+            </summary>
+            <param name="filePath">XML文件绝对路径</param>
+            <param name="xPath">范例: @"Skill/First/SkillItem"</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

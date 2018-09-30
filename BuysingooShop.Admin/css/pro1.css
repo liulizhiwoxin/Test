@@ -1,0 +1,269 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*! * @authors sunxingfan * @date 2014-12-29 16:30:00 * @description 红米手机概述*/.mi1scroll-pagination{display:none;position:fixed;top:50%;right:50px;z-index:99;width:13px;margin:0;padding:0;list-style-type:none;-webkit-transform:translate3d(0, -50%, 0);transform:translate3d(0, -50%, 0)}
+.mi1scroll-pagination li{position:relative;width:11px;height:11px;margin:10px auto}
+.mi1scroll-pagination li:first-child{width:13px;height:13px;margin:8px auto}
+.mi1scroll-pagination li:first-child a .dot{width:13px;height:13px;border:0;border-radius:none;background:transparent url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/icon-overall-home.png) no-repeat 50% 50%}
+.mi1scroll-pagination li:first-child a .title{display:none}
+.mi1scroll-pagination a{display:block;width:100%;height:100%}
+.mi1scroll-pagination a .dot{display:block;width:9px;height:9px;border:1px solid #ff9c00;border-radius:10px;text-indent:-9999em;text-align:left;overflow:hidden;_zoom:1;background:#c3c3c3;background:rgba(0,0,0,0.2)}
+.mi1scroll-pagination a .title{position:absolute;top:-3px;right:20px;text-align:right;font-size:12px;white-space:nowrap;color:#ff9c00;opacity:0;filter:alpha(opacity=0);-webkit-transition:opacity .3s linear;transition:opacity .3s linear}
+.mi1scroll-pagination a:hover .title{opacity:1;filter:alpha(opacity=100)}
+.mi1scroll-pagination .active a .dot{border:1px solid #c3c3c3;border:1px solid rgba(0,0,0,0.2);background:#fff;background:#ff9c00}
+.xm-product-box .nav-bar-hidden{_display:none;position:fixed;top:0;left:0;z-index:99;width:100%;margin-top:-52px;border-bottom:1px solid #ededed;background:rgba(255,255,255,0.8);-webkit-transition:margin-top .5s ease-out;transition:margin-top .5s ease-out}
+.xm-product-box .nav-bar-fixed{margin-top:0}
+.hongmi2-overall .section{min-width:1240px;min-height:630px;position:relative;font-size:16px;color:#333;-webkit-font-smoothing:antialiased}
+.hongmi2-overall .section .title{margin:0 0 20px;font-size:40px;font-weight:400;line-height:1.25}
+.hongmi2-overall .section .subtitle{margin:0 0 20px;font-weight:400;line-height:1.25}
+.hongmi2-overall .section .text{margin:0 0 5px;line-height:1.8}
+.hongmi2-overall .section .link{text-decoration:underline}
+.hongmi2-overall .section .link:hover{text-decoration:none}
+.hongmi2-overall .section .col-3-list{margin:0;padding:0;list-style-type:none}
+.hongmi2-overall .section .col-3-list li{float:left;width:33.3%;text-align:center}
+.hongmi2-overall .section .col-3-list li h3{margin:0 0 5px;font-size:22px;font-weight:400}
+.hongmi2-overall .section .col-3-list li p{margin:0;font-size:14px}
+.hongmi2-overall .section-intro{overflow:hidden;_zoom:1;background:url(../images/intro-bn-bg-768.jpg) no-repeat 50% 0%}
+.hongmi2-overall .section-intro .container{padding-top:180px}
+.hongmi2-overall .section-intro .content{width:496px;margin:0 auto;text-align:center}
+.hongmi2-overall .section-intro .title{margin:0;font-size:80px;line-height:1}
+.hongmi2-overall .section-intro .text{margin:0 0 35px;font-size:16px;text-align:center;color:#8c8c8c;color:rgba(0,0,0,0.5)}
+.hongmi2-overall .section-intro .price{margin:0;font-size:18px}
+.hongmi2-overall .section-intro .price .num{font-size:48px;font-family:"Avenir",arial,sans-serif;line-height:1}
+.hongmi2-overall .section-intro .tip{margin:0;font-size:12px;color:#8c8c8c;color:rgba(0,0,0,0.5)}
+.hongmi2-overall .section-intro .product{display:none;position:absolute;left:50%;bottom:-100px;-webkit-transform:translate3d(-50%, 0, 0);transform:translate3d(-50%, 0, 0)}
+.hongmi2-overall .section-intro.section-transition .product{display:none}
+.hongmi2-overall .section-performance{color:#fff;background:url(../images/intro-performance-bg-768.jpg) no-repeat 50% 0}
+.hongmi2-overall .section-performance .frame-01,.hongmi2-overall .section-performance .frame-02{position:absolute;left:50%;z-index:10}
+.hongmi2-overall .section-performance .frame-01{top:190px;width:920px;margin-left:-460px;text-align:center}
+.hongmi2-overall .section-performance .frame-02{top:190px;width:1200px;margin-left:-600px;text-align:center}
+.hongmi2-overall .section-performance .col-3-list li{position:relative;width:28%;padding:0 2.5%}
+.hongmi2-overall .section-performance .col-3-list li:before{position:absolute;left:0;bottom:0;content:'';width:1px;height:100px;background:#418bd8}
+.hongmi2-overall .section-performance .col-3-list li.first:before{display:none}
+.hongmi2-overall .section-performance .icon-cpu{display:block;width:50px;height:50px;margin:0 auto 10px;background:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/icons-cpu.png) no-repeat 0 0}
+.hongmi2-overall .section-performance .icon-cpu-01{background-position:0 0}
+.hongmi2-overall .section-performance .icon-cpu-02{background-position:0 -50px}
+.hongmi2-overall .section-performance .icon-cpu-03{background-position:0 -100px}
+.hongmi2-overall .section-4g{overflow:hidden;_zoom:1;color:#fff;background:#3b74db url(../images/intro-4g-bg-static-1080.jpg) no-repeat 50% 0}
+.hongmi2-overall .section-4g .container{padding-top:190px}
+.hongmi2-overall .section-4g .content{position:relative;z-index:10;width:930px;margin:0 auto;text-align:center}
+.hongmi2-overall .section-4g .link{color:#fff}
+.hongmi2-overall .section-4g .stage{position:absolute;left:50%;top:400px;z-index:1;width:800px;height:618px;margin:0 0 0 -400px;background:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-dashboard-bg-static.png) no-repeat 0 0}
+.hongmi2-overall .section-4g .stage .speed{display:block;padding:130px 0 0 30px;font-size:12px;text-align:center}
+.hongmi2-overall .section-4g .stage .speed .num{font-size:160px;font-family:'dincond-mediumregular',arial,sans-serif}
+.hongmi2-overall .section-4g.section-transition .stage{background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-dashboard-bg.png)}
+.hongmi2-overall .section-4g.section-transition .stage:before{position:absolute;left:50%;top:370px;z-index:3;width:54px;height:54px;margin:0 0 0 -27px;content:'';background:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-dashboard-dot.png) no-repeat 50% 50%}
+.hongmi2-overall .section-4g.section-transition .stage:after{position:absolute;left:50%;top:392px;z-index:2;width:360px;height:9px;margin:0 0 0 -360px;content:'';background:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-dashboard-indicator.png) no-repeat 0 0;-webkit-transform-origin:100% 50%;transform-origin:100% 50%}
+.hongmi2-overall .section-4g.section-done .stage:after{-webkit-animation:indicator-bg 1.5s linear .5s forwards;animation:indicator-bg 1.5s linear .5s forwards}
+.hongmi2-overall .section-screen{background: url(../images/intro-screen-bg-768.jpg) no-repeat 50% 25%}
+.hongmi2-overall .section-screen .container{padding-top:190px}
+.hongmi2-overall .section-screen .content{width:930px;margin:0 auto;text-align:center}
+.hongmi2-overall .section-screen .feature-list{width:600px;margin:30px auto 0}
+.hongmi2-overall .section-screen .icon-screen{display:block;width:64px;height:64px;margin:0 auto;background:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/icons-screen.png) no-repeat 0 0}
+.hongmi2-overall .section-screen .icon-screen-01{background-position:0 0}
+.hongmi2-overall .section-screen .icon-screen-02{background-position:0 -64px}
+.hongmi2-overall .section-screen .icon-screen-03{background-position:0 -128px}
+.hongmi2-overall .section-camera{background:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-camera-bg.jpg) no-repeat 50% 75%}
+.hongmi2-overall .section-camera .content{position:absolute;left:50%;top:50%;width:740px;margin:140px 0 0 -540px}
+.hongmi2-overall .section-camera .text{text-align:justify}
+.hongmi2-overall .section-camera.section-transition{background-position:20% -400px;-webkit-transition:background-position 1s 1s;transition:background-position 1s 1s}
+.hongmi2-overall .section-camera.section-active{background-position:50% 75%}
+.hongmi2-overall .section-samples{color:#d2d2d2;background:#222}
+.hongmi2-overall .section-samples .container{padding-top:190px}
+.hongmi2-overall .section-samples .content{width:620px;margin:0 auto;text-align:center}
+.hongmi2-overall .section-samples .xm-slider{width:1142px;height:650px;margin:100px auto 0;overflow:visible !important;box-shadow:0 20px 50px rgba(0,0,0,0.5)}
+.hongmi2-overall .section-samples .xm-slider .slide img{width:100%;height:650px}
+.hongmi2-overall .section-samples .xm-slider .xm-slider-previous,.hongmi2-overall .section-samples .xm-slider .xm-slider-next{display:block;top:50%;width:42px;height:84px;margin-top:-42px;background:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/icons-slider-arrow.png) no-repeat 0 0}
+.hongmi2-overall .section-samples .xm-slider .xm-slider-previous{left:-60px;background-position:0 0}
+.hongmi2-overall .section-samples .xm-slider .xm-slider-previous:hover{background-position:0 -84px}
+.hongmi2-overall .section-samples .xm-slider .xm-slider-next{right:-60px;background-position:-42px 0}
+.hongmi2-overall .section-samples .xm-slider .xm-slider-next:hover{background-position:-42px -84px}
+.hongmi2-overall .section-design{background:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-design-bg.jpg) no-repeat 50% 0}
+.hongmi2-overall .section-design .container{padding-top:190px}
+.hongmi2-overall .section-design .content{width:830px;margin:0 auto;text-align:center}
+.hongmi2-overall .section-cover{background:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-cover-bg.jpg) no-repeat 50% 50%}
+.hongmi2-overall .section-cover .content{position:absolute;left:50%;top:50%;width:680px;margin:-150px 0 0 -340px;text-align:center}
+.hongmi2-overall .section-miui{overflow:hidden;_zoom:1;background:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-miui-bg.jpg) no-repeat 50% 0}
+.hongmi2-overall .section-miui .container{padding-top:190px;color:#fff}
+.hongmi2-overall .section-miui .content{position:relative;z-index:10;width:900px;margin:0 auto;text-align:center}
+.hongmi2-overall .section-miui .link{color:#fff}
+.hongmi2-overall .section-miui .miui-screen-caontainer{position:absolute;left:50%;top:0;z-index:1;width:2560px;height:1440px;margin:0 0 0 -1280px}
+.hongmi2-overall .section-miui .screens{width:966px;height:491px;margin:0;padding:0;list-style-type:none}
+.hongmi2-overall .section-miui .screens .slide{display:none;position:absolute;left:0;top:0;width:966px;height:491px}
+.hongmi2-overall .section-miui .miui-screen-01{position:absolute;top:529px;left:950px}
+.hongmi2-overall .section-miui .miui-screen-01 .slide-01{background:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/miui.png) no-repeat 0 0}
+.hongmi2-overall .section-miui .miui-screen-01 .slide-03{background:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/miui.png) no-repeat 0 0}
+.hongmi2-overall .section-misc{overflow:hidden;_zoom:1;background:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-misc-bg.jpg) no-repeat 50% 50%}
+.hongmi2-overall .section-misc .content .mic,.hongmi2-overall .section-misc .content .battery{position:absolute;z-index:11}
+.hongmi2-overall .section-misc .content .mic{top:190px;right:124px;width:540px;text-align:right}
+.hongmi2-overall .section-misc .content .battery{bottom:190px;left:124px;width:580px}
+.hongmi2-overall .section-misc .content .icon-battery,.hongmi2-overall .section-misc .content .icon-mic{display:inline-block;*display:inline;*zoom:1;width:90px;height:90px;margin:10px 0}
+.hongmi2-overall .section-misc .content .icon-battery{background:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/icon-battery.png) no-repeat 50% 50%}
+.hongmi2-overall .section-misc .content .icon-mic{background:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/icon-mic.png) no-repeat 50% 50%}
+.hongmi2-overall .section-misc .product-container{position:absolute;left:50%;top:50%;z-index:1;width:2560px;height:1440px;margin:-720px 0 0 -1280px}
+.hongmi2-overall .section-misc .product{width:975px;height:1100px;margin:200px 0 0 810px;background:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-misc-product.png)}
+.hongmi2-overall .section-misc.section-transition .product{opacity:0;-webkit-transform:translate3d(100px, 130px, 0);transform:translate3d(100px, 130px, 0);-webkit-transition:all 1s ease-in;transition:all 1s ease-in}
+.hongmi2-overall .section-misc.section-finish .product{opacity:1;-webkit-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0)}
+.hongmi2-overall .section-summary .col-4-list{width:100%;height:100%;margin:0;padding:0;list-style-type:none}
+.hongmi2-overall .section-summary .col-4-list li{float:left;width:25%;height:100%;text-align:center}
+.hongmi2-overall .section-summary .col-4-list .content{padding-top:30%;height:70%}
+.hongmi2-overall .section-summary .col-4-list h3{margin:0 0 10px;font-size:22px;font-weight:400}
+.hongmi2-overall .section-summary .col-4-list p{margin:0}
+.hongmi2-overall .section-summary .col-4-list .col-01{background:#efeff7 url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-summary-01.jpg) no-repeat 50% 0}
+.hongmi2-overall .section-summary .col-4-list .col-02{background:#afe1e0 url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-summary-02.jpg) no-repeat 50% 0}
+.hongmi2-overall .section-summary .col-4-list .col-03{background:#ffcd52 url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-summary-03.jpg) no-repeat 50% 0}
+.hongmi2-overall .section-summary .col-4-list .col-04{background:#ffa7bc url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-summary-04.jpg) no-repeat 50% 0}
+@media (max-height:1280px){.hongmi2-overall .section-intro{background-position:50% 50%}}@media (max-height:1080px){.hongmi2-overall .section{min-width:930px;font-size:14px}
+.hongmi2-overall .section .title{margin-bottom:10px;font-size:24px}
+.hongmi2-overall .section-intro{background-position:50% 0;background-image:url(../images/intro-bn-bg-768.jpg)}
+.hongmi2-overall .section-intro .container{padding-top:180px}
+.hongmi2-overall .section-intro .title{margin:0;font-size:70px}
+.hongmi2-overall .section-intro .text{margin-bottom:25px;font-size:14px}
+.hongmi2-overall .section-intro .price{font-size:16px}
+.hongmi2-overall .section-intro .price .num{font-size:32px}
+.hongmi2-overall .section-intro.section-transition .product{display:none}
+.hongmi2-overall .section-performance{background-image:url(../images/intro-performance-bg-768.jpg)}
+.hongmi2-overall .section-performance .frame-01{top:150px}
+.hongmi2-overall .section-performance .frame-02{top:150px;width:900px;margin-left:-450px}
+.hongmi2-overall .section-4g{background-image:url(../images/intro-4g-bg-static-1080.jpg)}
+.hongmi2-overall .section-4g .container{padding-top:120px}
+.hongmi2-overall .section-4g .stage{top:300px;width:600px;height:464px;margin:0 0 0 -300px;background:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-dashboard-bg-static-1080.png) no-repeat 0 0}
+.hongmi2-overall .section-4g .stage .speed{padding:100px 0 0 30px}
+.hongmi2-overall .section-4g .stage .speed .num{font-size:110px}
+.hongmi2-overall .section-4g.section-transition .stage{background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-dashboard-bg-1080.png)}
+.hongmi2-overall .section-4g.section-transition .stage:before{top:278px;width:41px;height:41px;margin:0 0 0 -21px;background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-dashboard-dot-1080.png)}
+.hongmi2-overall .section-4g.section-transition .stage:after{top:295px;width:270px;height:7px;margin:0 0 0 -270px;background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-dashboard-indicator-1080.png)}
+.hongmi2-overall .section-screen{background-image:url(../images/intro-screen-bg-768.jpg)}
+.hongmi2-overall .section-screen .container{padding-top:120px}
+.hongmi2-overall .section-screen .content{width:800px}
+.hongmi2-overall .section-camera{background-image:url(../images/intro-camera-bg-768.jpg)}
+.hongmi2-overall .section-camera .content{width:620px;margin:100px 0 0 -540px}
+.hongmi2-overall .section-samples .container{padding-top:150px}
+.hongmi2-overall .section-samples .xm-slider{width:980px;height:560px;margin-top:40px}
+.hongmi2-overall .section-samples .xm-slider .slide img{height:558px}
+.hongmi2-overall .section-design{background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-design-bg-1080.jpg)}
+.hongmi2-overall .section-design .container{padding-top:120px}
+.hongmi2-overall .section-design .content{width:830px;margin:0 auto;text-align:center}
+.hongmi2-overall .section-cover{background-image:url(../images/intro-cover-bg-768.jpg)}
+.hongmi2-overall .section-cover .content{width:600px;margin:-150px 0 0 -300px}
+.hongmi2-overall .section-miui{background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-miui-bg-1080.jpg)}
+.hongmi2-overall .section-miui .container{padding-top:150px}
+.hongmi2-overall .section-miui .content{width:840px;margin:0 auto;text-align:center}
+.hongmi2-overall .section-misc .content .mic{top:150px;right:200px}
+.hongmi2-overall .section-misc .content .battery{bottom:150px;left:200px}
+.hongmi2-overall .section-misc .product{width:731px;height:825px;margin:350px 0 0 940px;background:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-misc-product-1080.png)}
+.hongmi2-overall .section-summary .col-4-list .content{height:75%;padding-top:25%}
+.hongmi2-overall .section-summary .col-4-list h3{font-size:18px}
+.hongmi2-overall .section-summary .col-4-list .col-01{background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-summary-01-1080.jpg)}
+.hongmi2-overall .section-summary .col-4-list .col-02{background-color:#aee0df;background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-summary-02-1080.jpg)}
+.hongmi2-overall .section-summary .col-4-list .col-03{background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-summary-03-1080.jpg)}
+.hongmi2-overall .section-summary .col-4-list .col-04{background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-summary-04-1080.jpg)}}@media (max-height:1000px){.hongmi2-overall .section-intro{background-position:50% 25%}
+.hongmi2-overall .section-intro .container{padding-top:160px}}@media (max-height:800px){.hongmi2-overall .section-intro{background-position:50% 0}}@media (max-height:768px){.hongmi2-overall .section-intro{background-position:50% 25%;background-image:url(../images/intro-bn-bg-768.jpg)}
+.hongmi2-overall .section-intro .container{padding-top:120px}
+.hongmi2-overall .section-intro .title{margin:0;font-size:54px}
+.hongmi2-overall .section-intro.section-transition .product{display:none}
+.hongmi2-overall .section-performance{background-image:url(../images/intro-performance-bg-768.jpg)}
+.hongmi2-overall .section-performance .frame-01{top:120px;width:640px;margin-left:-320px}
+.hongmi2-overall .section-performance .frame-02{top:120px}
+.hongmi2-overall .section-4g .container{padding-top:100px}
+.hongmi2-overall .section-4g .stage{top:260px}
+.hongmi2-overall .section-screen{background-image:url(../images/intro-screen-bg-768.jpg);background-position:50% 0}
+.hongmi2-overall .section-screen .container{padding-top:100px}
+.hongmi2-overall .section-screen .feature-list{margin-top:20px}
+.hongmi2-overall .section-camera{background-image:url(../images/intro-camera-bg-768.jpg)}
+.hongmi2-overall .section-camera .content{width:500px;margin:50px 0 0 -440px}
+.hongmi2-overall .section-samples .container{padding-top:120px}
+.hongmi2-overall .section-samples .xm-slider{width:703px;height:400px;margin-top:20px}
+.hongmi2-overall .section-samples .xm-slider .slide img{height:400px}
+.hongmi2-overall .section-design{background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-design-bg-768.jpg)}
+.hongmi2-overall .section-design .container{padding-top:100px}
+.hongmi2-overall .section-design .content{width:830px;margin:0 auto;text-align:center}
+.hongmi2-overall .section-cover{background-image:url(../images/intro-cover-bg-768.jpg)}
+.hongmi2-overall .section-cover .content{width:520px;margin:-140px 0 0 -280px}
+.hongmi2-overall .section-miui{background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-miui-bg-768.jpg)}
+.hongmi2-overall .section-miui .container{padding-top:100px}
+.hongmi2-overall .section-miui .content{width:600px}
+.hongmi2-overall .section-misc .content .mic{top:120px;right:80px}
+.hongmi2-overall .section-misc .content .battery{bottom:80px;left:80px}
+.hongmi2-overall .section-misc .product{width:520px;height:587px;margin:450px 0 0 1030px;background:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-misc-product-768.png)}
+.hongmi2-overall .section-summary .col-4-list .content{height:80%;padding-top:20%}
+.hongmi2-overall .section-summary .col-4-list .col-01{background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-summary-01-768.jpg)}
+.hongmi2-overall .section-summary .col-4-list .col-02{background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-summary-02-768.jpg)}
+.hongmi2-overall .section-summary .col-4-list .col-03{background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-summary-03-768.jpg)}
+.hongmi2-overall .section-summary .col-4-list .col-04{background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-summary-04-768.jpg)}}@media (max-height:730px){.hongmi2-overall .section-intro{background-position:50% 0%}}body:after{content:url(http://img03.mifile.cn/webfile/images/2014/cn/icon/lightbox/close.png) url(http://img03.mifile.cn/webfile/images/2014/cn/icon/lightbox/loading.gif) url(http://img03.mifile.cn/webfile/images/2014/cn/icon/lightbox/prev.png) url(http://img03.mifile.cn/webfile/images/2014/cn/icon/lightbox/next.png);display:none}
+.lightboxOverlay{position:absolute;top:0;left:0;z-index:9999;background-color:black;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=80);opacity:0.8;display:none}
+.lightbox{position:absolute;left:0;width:100%;z-index:10000;text-align:center;line-height:0;font-weight:normal}
+.lightbox .lb-image{display:block;height:auto;max-width:inherit;border-radius:3px}
+.lightbox a img{border:none}
+.lb-outerContainer{position:relative;background-color:white;*zoom:1;width:250px;height:250px;margin:0 auto;border-radius:4px}
+.lb-outerContainer:after{content:"";display:table;clear:both}
+.lb-container{padding:4px}
+.lb-loader{position:absolute;top:43%;left:0;height:25%;width:100%;text-align:center;line-height:0}
+.lb-cancel{display:block;width:32px;height:32px;margin:0 auto;background:url(http://img03.mifile.cn/webfile/images/2014/cn/icon/lightbox/loading.gif) no-repeat}
+.lb-nav{position:absolute;top:0;left:0;height:100%;width:100%;z-index:10}
+.lb-container>.nav{left:0}
+.lb-nav a{outline:none;background-image:url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==')}
+.lb-prev,.lb-next{height:100%;cursor:pointer;display:block}
+.lb-nav a.lb-prev{width:34%;left:0;float:left;background:url(http://img03.mifile.cn/webfile/images/2014/cn/icon/lightbox/prev.png) left 48% no-repeat;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);opacity:0;-webkit-transition:opacity 0.6s;transition:opacity 0.6s}
+.lb-nav a.lb-prev:hover{filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);opacity:1}
+.lb-nav a.lb-next{width:64%;right:0;float:right;background:url(http://img03.mifile.cn/webfile/images/2014/cn/icon/lightbox/next.png) right 48% no-repeat;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);opacity:0;-webkit-transition:opacity 0.6s;transition:opacity 0.6s}
+.lb-nav a.lb-next:hover{filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);opacity:1}
+.lb-dataContainer{margin:0 auto;padding-top:5px;*zoom:1;width:100%;border-bottom-left-radius:4px;border-bottom-right-radius:4px}
+.lb-dataContainer:after{content:"";display:table;clear:both}
+.lb-data{padding:0 4px;color:#ccc}
+.lb-data .lb-details{width:85%;float:left;text-align:left;line-height:1.1em}
+.lb-data .lb-caption{font-size:13px;font-weight:bold;line-height:1em}
+.lb-data .lb-number{display:block;clear:left;padding-bottom:1em;font-size:12px;color:#999999}
+.lb-data .lb-close{display:block;float:right;width:30px;height:30px;background:url(http://img03.mifile.cn/webfile/images/2014/cn/icon/lightbox/close.png) top right no-repeat;text-align:right;outline:none;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);opacity:0.7;-webkit-transition:opacity 0.2s;transition:opacity 0.2s}
+.lb-data .lb-close:hover{cursor:pointer;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);opacity:1}
+.lb-dataContainer{position:absolute;left:50%;top:0}
+.lb-data .lb-details{display:none}
+.lb-data .lb-close{position:absolute;right:-40px}
+.lteie8 .hongmi2-overall .section{min-width:930px;font-size:14px}
+.lteie8 .hongmi2-overall .section .title{margin-bottom:10px;font-size:24px}
+.lteie8 .hongmi2-overall .section-intro{background-position:50% 25%;background-image:url(../images/intro-bn-bg-768.jpg)}
+.lteie8 .hongmi2-overall .section-intro .container{padding-top:120px}
+.lteie8 .hongmi2-overall .section-intro .title{margin:0;font-size:54px}
+.lteie8 .hongmi2-overall .section-intro .text{margin-bottom:25px;font-size:14px}
+.lteie8 .hongmi2-overall .section-intro .price{font-size:16px}
+.lteie8 .hongmi2-overall .section-intro .price .num{font-size:32px}
+.lteie8 .hongmi2-overall .section-intro.section-transition .product{display:none}
+.lteie8 .hongmi2-overall .section-performance{background-image:url(../images/intro-performance-bg-768.jpg)}
+.lteie8 .hongmi2-overall .section-performance .frame-01{top:120px;width:640px;margin-left:-320px}
+.lteie8 .hongmi2-overall .section-performance .frame-02{top:120px}
+.lteie8 .hongmi2-overall .section-4g{background-image:url(../images/intro-4g-bg-static-1080.jpg)}
+.lteie8 .hongmi2-overall .section-4g .container{padding-top:100px}
+.lteie8 .hongmi2-overall .section-4g .stage{top:260px;width:600px;height:464px;margin:0 0 0 -300px;background:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-dashboard-bg-static-1080.png) no-repeat 0 0}
+.lteie8 .hongmi2-overall .section-4g .stage .speed{padding:100px 0 0 30px}
+.lteie8 .hongmi2-overall .section-4g .stage .speed .num{font-size:110px}
+.lteie8 .hongmi2-overall .section-4g.section-transition .stage{background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-dashboard-bg-1080.png)}
+.lteie8 .hongmi2-overall .section-4g.section-transition .stage:before{top:278px;width:41px;height:41px;margin:0 0 0 -21px;background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-dashboard-dot-1080.png)}
+.lteie8 .hongmi2-overall .section-4g.section-transition .stage:after{top:295px;width:270px;height:7px;margin:0 0 0 -270px;background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-dashboard-indicator-1080.png)}
+.lteie8 .hongmi2-overall .section-screen{background-image:url(../images/intro-screen-bg-768.jpg);background-position:50% 0}
+.lteie8 .hongmi2-overall .section-screen .container{padding-top:100px}
+.lteie8 .hongmi2-overall .section-screen .content{width:800px}
+.lteie8 .hongmi2-overall .section-screen .feature-list{margin-top:20px}
+.lteie8 .hongmi2-overall .section-camera{background-image:url(../images/intro-camera-bg-768.jpg)}
+.lteie8 .hongmi2-overall .section-camera .content{width:500px;margin:50px 0 0 -440px}
+.lteie8 .hongmi2-overall .section-samples .container{padding-top:150px}
+.lteie8 .hongmi2-overall .section-samples .sample-list{top:280px;width:1020px;margin:0 0 0 -510px}
+.lteie8 .hongmi2-overall .section-samples .sample-list .sample-1x2{width:250px;margin-right:5px}
+.lteie8 .hongmi2-overall .section-samples .sample-list .sample-2x1{width:505px;margin-bottom:5px}
+.lteie8 .hongmi2-overall .section-samples .sample-list .sample-1x1{width:250px;margin-right:5px}
+.lteie8 .hongmi2-overall .section-design{background-image:url(../images/intro-design-bg-768.jpg)}
+.lteie8 .hongmi2-overall .section-design .container{padding-top:100px}
+.lteie8 .hongmi2-overall .section-design .content{width:830px;margin:0 auto;text-align:center}
+.lteie8 .hongmi2-overall .section-cover{background-image:url(../images/intro-cover-bg-768.jpg)}
+.lteie8 .hongmi2-overall .section-cover .content{width:520px;margin:-140px 0 0 -280px}
+.lteie8 .hongmi2-overall .section-miui{background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-miui-bg-768.jpg)}
+.lteie8 .hongmi2-overall .section-miui .container{padding-top:100px}
+.lteie8 .hongmi2-overall .section-miui .content{width:600px;margin:0 auto;text-align:center}
+.lteie8 .hongmi2-overall .section-misc .content .mic{top:120px;right:80px}
+.lteie8 .hongmi2-overall .section-misc .content .battery{bottom:80px;left:80px}
+.lteie8 .hongmi2-overall .section-misc .product{width:520px;height:587px;margin:450px 0 0 1030px;background:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-misc-product-768.png)}
+.lteie8 .hongmi2-overall .section-summary .col-4-list .content{height:80%;padding-top:20%}
+.lteie8 .hongmi2-overall .section-summary .col-4-list h3{font-size:18px}
+.lteie8 .hongmi2-overall .section-summary .col-4-list .col-01{background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-summary-01-768.jpg)}
+.lteie8 .hongmi2-overall .section-summary .col-4-list .col-02{background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-summary-02-768.jpg)}
+.lteie8 .hongmi2-overall .section-summary .col-4-list .col-03{background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-summary-03-768.jpg)}
+.lteie8 .hongmi2-overall .section-summary .col-4-list .col-04{background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/goods/hongmi2/overall/intro-summary-04-768.jpg)}

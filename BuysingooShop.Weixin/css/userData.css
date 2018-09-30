@@ -1,0 +1,28 @@
+
+@media only screen and (max-width: 750px) {
+
+    .dataBox{position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 80%;border-radius: 15px;box-shadow: 0 10px 30px #ddd;padding-bottom: 2rem;}
+    .dataBox .card{width: 80%;height: 6rem;font:bold 1.5rem/6rem 'Microsoft YaHei';background: linear-gradient(to bottom left,#EACDA3 ,#D6AE7B);margin: -3rem auto 2rem;border-radius: 15px;box-shadow: 0 10px 30px #ddd;text-align: center;color: #fff;}
+    .dataBox .line{width: 66%;margin: 0 auto 1.2rem;}
+    .dataBox .line>span.fl{line-height: 1.5rem;}
+    .dataBox .line input[type=text]{width: 75%;height: 1.5rem;border: none;border-bottom: 1px solid #000;font-size: .8rem;-webkit-appearance: none;-moz-appearance: none;appearance: none;}
+    .dataBox p{text-align: center;font: .8rem/1 'Microsoft YaHei';margin: .9rem 0 1.4rem;}
+    .dataBox p a{color: #287AFA;}
+
+    .dataBox .sexOpt,
+    .dataBox .careerOpt{font-size: .7rem;line-height: 1.5rem;}
+
+    .dataBox .sexOpt span,
+    .dataBox .careerOpt span{display: inline-block;padding: 0 .4rem;border: 1px solid transparent;border-radius: 5px;}
+
+    .dataBox .sexOpt span.active,
+    .dataBox .careerOpt span.active{border: 1px solid #D2AB79;color: #D2AB79;}
+    .dataBox textarea{width: 100%;height: 5rem;resize: none;border: 1px solid #bfbfbf;font: .8rem/1.5 'Microsoft YaHei';padding: .2rem .3rem;}
+
+    .dataBox button{display: block;width: 66%;height: 2rem;margin: 1.5rem auto 0;background-color: #EACDA3;color: #fff;border-radius: 15px;box-shadow: 0 3px 9px #EFE0CC;}
+
+
+
+}
+
+

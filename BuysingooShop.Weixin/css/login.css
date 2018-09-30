@@ -1,0 +1,47 @@
+
+@media only screen and (max-width: 750px) {
+
+
+	#lanzuan{position:relative;text-align:center;}
+	#lanzuan img{width:100%;height:auto;}
+	#lanzuan a{position:absolute;left:10%;bottom:3em;display:block;width:80%;height:2.5rem;background:#9fd3ed;color: #000;line-height:2.5em;border-radius:15rem;text-align:center;}
+
+	#login_reg{width:100%;height:650px;background:#ccc url("../images/login-bg.png") center top;padding:3rem 0;text-align:center;}
+	#login_reg .lipin{width:70%;height:auto;margin:auto;}	
+	#login_reg .lipin img{width:100%;}
+	#login_reg .minzi{color:#fff;margin-top:0.5rem;line-height:1.2rem;}
+	#login_reg .minzi span{font-size:1.2rem;}
+	.loginBox2{margin-top:2rem;}
+	.loginBox2 .line{width: 80%;margin: 1.5rem auto 0.5rem;}
+    .loginBox2 .line input[type=text]{border-radius: 15px;width: 100%;padding-left:1rem;height: 2rem;border: none;border-bottom: 1px solid #000;font-size: .8rem;-webkit-appearance: none;-moz-appearance: none;appearance: none;}
+    .loginBox2 .line input.w60{width: 70%;border-radius: 15px;left:0;float:left;}
+    .loginBox2 .line .getAuthCode{height: 2rem;font: .7rem/1.8rem 'Microsoft YaHei';background-color: #9fd3ed;color: #000;border-radius: 15px;padding: 0 .5rem;}
+    .loginBox2 button{display: block;width: 80%;height: 2rem;margin: 5rem auto 0;background-color: #9fd3ed;color: #000;border-radius: 15px;}
+    .loginBox2 p{text-align: center;font: .8rem/1 'Microsoft YaHei';margin: .9rem 0 1.4rem;color:#fff;}
+    .loginBox2 p a{color: #287AFA;}
+	#login_reg .lipin2{margin-top:3rem;}
+	#login_reg .lipin2 img{width:40%;}
+	
+	
+
+	
+	/*登入页面*/
+    .loginBox{position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 80%;border-radius: 15px;box-shadow: 0 10px 30px #ddd;}
+    .loginBox.login{padding-bottom: 3rem;}
+    .loginBox .userCard{width: 80%;height: 8rem;background: #D6AE7B url("../images/img_userCard.png") no-repeat center/auto 65%;margin: -4rem auto 2rem;border-radius: 15px;box-shadow: 0 10px 30px #ddd;}
+    .loginBox .line{width: 66%;margin: 0 auto 1.5rem;}
+    .loginBox .line input[type=text]{width: 100%;height: 1.8rem;border: none;border-bottom: 1px solid #000;font-size: .8rem;-webkit-appearance: none;-moz-appearance: none;appearance: none;}
+    .loginBox .line input.w60{width: 60%;}
+    .loginBox .line .getAuthCode{height: 1.8rem;font: .7rem/1.8rem 'Microsoft YaHei';background-color: #D6AE7B;color: #fff;border-radius: 15px;padding: 0 .5rem;}
+    .loginBox button{display: block;width: 66%;height: 2rem;margin: 2.5rem auto 0;background-color: #EACDA3;color: #fff;border-radius: 15px;}
+    .loginBox p{text-align: center;font: .8rem/1 'Microsoft YaHei';margin: .9rem 0 1.4rem;}
+    .loginBox p a{color: #287AFA;}
+
+	
+	
+	
+	
+	
+}
+
+

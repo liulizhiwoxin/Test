@@ -1,0 +1,958 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetUserInfoByLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserInfoByLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserInfoByLoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="submitpay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="orderid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="submitpayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="submitpayResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="alipay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="orderid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="alipayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="alipayResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserRegedit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msgcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserRegeditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserRegeditResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserRegedit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msgcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="marketId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="organizeId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="preId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserRegeditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserRegeditResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMsgCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="moblie" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMsgCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendMsgCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAddress1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAddress1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAddress1Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGoodsInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGoodsInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGoodsInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGoods">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetGoodsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGoodsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="goods" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="addressId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="expressId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="totalprice" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bill_type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bill_rise" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="down_order" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="coupon_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="store_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="store_address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="store_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="remark" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContentus">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetContentusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetContentusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompany">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCompanyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCompanyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGoodsInfos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="goodsId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGoodsInfosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGoodsInfosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAddressResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getGoodsImg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="goodsId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getGoodsImgResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getGoodsImgResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getGoodslist">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="category_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getGoodslistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getGoodslistResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="province" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="area" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="street" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="zipcode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="tel" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addAddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="addAddressResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getorders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getordersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getordersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getorder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="orderid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getorderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getorderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getgoodsorder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="orderid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getgoodsorderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getgoodsorderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSelectAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="addressid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSelectAddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSelectAddressResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExpress">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetExpressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetExpressResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetUserInfoByLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserInfoByLogin" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoByLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserInfoByLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="submitpaySoapIn">
+    <wsdl:part name="parameters" element="tns:submitpay" />
+  </wsdl:message>
+  <wsdl:message name="submitpaySoapOut">
+    <wsdl:part name="parameters" element="tns:submitpayResponse" />
+  </wsdl:message>
+  <wsdl:message name="alipaySoapIn">
+    <wsdl:part name="parameters" element="tns:alipay" />
+  </wsdl:message>
+  <wsdl:message name="alipaySoapOut">
+    <wsdl:part name="parameters" element="tns:alipayResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserRegeditSoapIn">
+    <wsdl:part name="parameters" element="tns:UserRegedit" />
+  </wsdl:message>
+  <wsdl:message name="UserRegeditSoapOut">
+    <wsdl:part name="parameters" element="tns:UserRegeditResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserRegeditSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserRegedit" />
+  </wsdl:message>
+  <wsdl:message name="GetUserRegeditSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserRegeditResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMsgCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMsgCode" />
+  </wsdl:message>
+  <wsdl:message name="SendMsgCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMsgCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAddress1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetAddress1" />
+  </wsdl:message>
+  <wsdl:message name="GetAddress1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetAddress1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetGoodsInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGoodsInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetGoodsInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGoodsInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGoodsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGoods" />
+  </wsdl:message>
+  <wsdl:message name="GetGoodsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGoodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitOrder" />
+  </wsdl:message>
+  <wsdl:message name="SubmitOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetContentusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetContentus" />
+  </wsdl:message>
+  <wsdl:message name="GetContentusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetContentusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCompanySoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompany" />
+  </wsdl:message>
+  <wsdl:message name="GetCompanySoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGoodsInfosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGoodsInfos" />
+  </wsdl:message>
+  <wsdl:message name="GetGoodsInfosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGoodsInfosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAddress" />
+  </wsdl:message>
+  <wsdl:message name="GetAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="getGoodsImgSoapIn">
+    <wsdl:part name="parameters" element="tns:getGoodsImg" />
+  </wsdl:message>
+  <wsdl:message name="getGoodsImgSoapOut">
+    <wsdl:part name="parameters" element="tns:getGoodsImgResponse" />
+  </wsdl:message>
+  <wsdl:message name="getGoodslistSoapIn">
+    <wsdl:part name="parameters" element="tns:getGoodslist" />
+  </wsdl:message>
+  <wsdl:message name="getGoodslistSoapOut">
+    <wsdl:part name="parameters" element="tns:getGoodslistResponse" />
+  </wsdl:message>
+  <wsdl:message name="addAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:addAddress" />
+  </wsdl:message>
+  <wsdl:message name="addAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:addAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="getordersSoapIn">
+    <wsdl:part name="parameters" element="tns:getorders" />
+  </wsdl:message>
+  <wsdl:message name="getordersSoapOut">
+    <wsdl:part name="parameters" element="tns:getordersResponse" />
+  </wsdl:message>
+  <wsdl:message name="getorderSoapIn">
+    <wsdl:part name="parameters" element="tns:getorder" />
+  </wsdl:message>
+  <wsdl:message name="getorderSoapOut">
+    <wsdl:part name="parameters" element="tns:getorderResponse" />
+  </wsdl:message>
+  <wsdl:message name="getgoodsorderSoapIn">
+    <wsdl:part name="parameters" element="tns:getgoodsorder" />
+  </wsdl:message>
+  <wsdl:message name="getgoodsorderSoapOut">
+    <wsdl:part name="parameters" element="tns:getgoodsorderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSelectAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSelectAddress" />
+  </wsdl:message>
+  <wsdl:message name="GetSelectAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSelectAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetExpressSoapIn">
+    <wsdl:part name="parameters" element="tns:GetExpress" />
+  </wsdl:message>
+  <wsdl:message name="GetExpressSoapOut">
+    <wsdl:part name="parameters" element="tns:GetExpressResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AdminServiceSoap">
+    <wsdl:operation name="GetUserInfoByLogin">
+      <wsdl:input message="tns:GetUserInfoByLoginSoapIn" />
+      <wsdl:output message="tns:GetUserInfoByLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="submitpay">
+      <wsdl:input message="tns:submitpaySoapIn" />
+      <wsdl:output message="tns:submitpaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="alipay">
+      <wsdl:input message="tns:alipaySoapIn" />
+      <wsdl:output message="tns:alipaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserRegedit">
+      <wsdl:input message="tns:UserRegeditSoapIn" />
+      <wsdl:output message="tns:UserRegeditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRegedit">
+      <wsdl:input message="tns:GetUserRegeditSoapIn" />
+      <wsdl:output message="tns:GetUserRegeditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMsgCode">
+      <wsdl:input message="tns:SendMsgCodeSoapIn" />
+      <wsdl:output message="tns:SendMsgCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAddress1">
+      <wsdl:input message="tns:GetAddress1SoapIn" />
+      <wsdl:output message="tns:GetAddress1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGoodsInfo">
+      <wsdl:input message="tns:GetGoodsInfoSoapIn" />
+      <wsdl:output message="tns:GetGoodsInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGoods">
+      <wsdl:input message="tns:GetGoodsSoapIn" />
+      <wsdl:output message="tns:GetGoodsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitOrder">
+      <wsdl:input message="tns:SubmitOrderSoapIn" />
+      <wsdl:output message="tns:SubmitOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContentus">
+      <wsdl:input message="tns:GetContentusSoapIn" />
+      <wsdl:output message="tns:GetContentusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompany">
+      <wsdl:input message="tns:GetCompanySoapIn" />
+      <wsdl:output message="tns:GetCompanySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGoodsInfos">
+      <wsdl:input message="tns:GetGoodsInfosSoapIn" />
+      <wsdl:output message="tns:GetGoodsInfosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAddress">
+      <wsdl:input message="tns:GetAddressSoapIn" />
+      <wsdl:output message="tns:GetAddressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getGoodsImg">
+      <wsdl:input message="tns:getGoodsImgSoapIn" />
+      <wsdl:output message="tns:getGoodsImgSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getGoodslist">
+      <wsdl:input message="tns:getGoodslistSoapIn" />
+      <wsdl:output message="tns:getGoodslistSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addAddress">
+      <wsdl:input message="tns:addAddressSoapIn" />
+      <wsdl:output message="tns:addAddressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getorders">
+      <wsdl:input message="tns:getordersSoapIn" />
+      <wsdl:output message="tns:getordersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getorder">
+      <wsdl:input message="tns:getorderSoapIn" />
+      <wsdl:output message="tns:getorderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getgoodsorder">
+      <wsdl:input message="tns:getgoodsorderSoapIn" />
+      <wsdl:output message="tns:getgoodsorderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectAddress">
+      <wsdl:input message="tns:GetSelectAddressSoapIn" />
+      <wsdl:output message="tns:GetSelectAddressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpress">
+      <wsdl:input message="tns:GetExpressSoapIn" />
+      <wsdl:output message="tns:GetExpressSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AdminServiceSoap" type="tns:AdminServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserInfoByLogin">
+      <soap:operation soapAction="http://tempuri.org/GetUserInfoByLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitpay">
+      <soap:operation soapAction="http://tempuri.org/submitpay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="alipay">
+      <soap:operation soapAction="http://tempuri.org/alipay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRegedit">
+      <soap:operation soapAction="http://tempuri.org/UserRegedit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRegedit">
+      <soap:operation soapAction="http://tempuri.org/GetUserRegedit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMsgCode">
+      <soap:operation soapAction="http://tempuri.org/SendMsgCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddress1">
+      <soap:operation soapAction="http://tempuri.org/GetAddress1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGoodsInfo">
+      <soap:operation soapAction="http://tempuri.org/GetGoodsInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGoods">
+      <soap:operation soapAction="http://tempuri.org/GetGoods" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitOrder">
+      <soap:operation soapAction="http://tempuri.org/SubmitOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContentus">
+      <soap:operation soapAction="http://tempuri.org/GetContentus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompany">
+      <soap:operation soapAction="http://tempuri.org/GetCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGoodsInfos">
+      <soap:operation soapAction="http://tempuri.org/GetGoodsInfos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddress">
+      <soap:operation soapAction="http://tempuri.org/GetAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGoodsImg">
+      <soap:operation soapAction="http://tempuri.org/getGoodsImg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGoodslist">
+      <soap:operation soapAction="http://tempuri.org/getGoodslist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addAddress">
+      <soap:operation soapAction="http://tempuri.org/addAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getorders">
+      <soap:operation soapAction="http://tempuri.org/getorders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getorder">
+      <soap:operation soapAction="http://tempuri.org/getorder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getgoodsorder">
+      <soap:operation soapAction="http://tempuri.org/getgoodsorder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectAddress">
+      <soap:operation soapAction="http://tempuri.org/GetSelectAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpress">
+      <soap:operation soapAction="http://tempuri.org/GetExpress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AdminServiceSoap12" type="tns:AdminServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserInfoByLogin">
+      <soap12:operation soapAction="http://tempuri.org/GetUserInfoByLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitpay">
+      <soap12:operation soapAction="http://tempuri.org/submitpay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="alipay">
+      <soap12:operation soapAction="http://tempuri.org/alipay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRegedit">
+      <soap12:operation soapAction="http://tempuri.org/UserRegedit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRegedit">
+      <soap12:operation soapAction="http://tempuri.org/GetUserRegedit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMsgCode">
+      <soap12:operation soapAction="http://tempuri.org/SendMsgCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddress1">
+      <soap12:operation soapAction="http://tempuri.org/GetAddress1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGoodsInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetGoodsInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGoods">
+      <soap12:operation soapAction="http://tempuri.org/GetGoods" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitOrder">
+      <soap12:operation soapAction="http://tempuri.org/SubmitOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContentus">
+      <soap12:operation soapAction="http://tempuri.org/GetContentus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompany">
+      <soap12:operation soapAction="http://tempuri.org/GetCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGoodsInfos">
+      <soap12:operation soapAction="http://tempuri.org/GetGoodsInfos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddress">
+      <soap12:operation soapAction="http://tempuri.org/GetAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGoodsImg">
+      <soap12:operation soapAction="http://tempuri.org/getGoodsImg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGoodslist">
+      <soap12:operation soapAction="http://tempuri.org/getGoodslist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addAddress">
+      <soap12:operation soapAction="http://tempuri.org/addAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getorders">
+      <soap12:operation soapAction="http://tempuri.org/getorders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getorder">
+      <soap12:operation soapAction="http://tempuri.org/getorder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getgoodsorder">
+      <soap12:operation soapAction="http://tempuri.org/getgoodsorder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectAddress">
+      <soap12:operation soapAction="http://tempuri.org/GetSelectAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpress">
+      <soap12:operation soapAction="http://tempuri.org/GetExpress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AdminService">
+    <wsdl:port name="AdminServiceSoap" binding="tns:AdminServiceSoap">
+      <soap:address location="http://localhost:9628/WebAppService/AdminService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AdminServiceSoap12" binding="tns:AdminServiceSoap12">
+      <soap12:address location="http://localhost:9628/WebAppService/AdminService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
