@@ -301,6 +301,16 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BuysingooShop.BLL\BuysingooShop.BLL.csproj">
+      <Project>{0f0a91db-eb1d-4ee7-a9de-affa2efeb729}</Project>
+      <Name>BuysingooShop.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BuysingooShop.Model\BuysingooShop.Model.csproj">
+      <Project>{bc0341e6-7704-4e30-aa80-0a0b68ce70f1}</Project>
+      <Name>BuysingooShop.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

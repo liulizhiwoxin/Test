@@ -24,7 +24,6 @@ namespace BuysingooShop.Api.Common.CommonHelpers
                 if (string.IsNullOrWhiteSpace(code))
                     throw new Exception("缺少参数code");
                 //获取web.config配置文件内容
-                
                 string appid = ConfigurationManager.AppSettings["appid"].ToString();
                 string secret = ConfigurationManager.AppSettings["secret"].ToString();
                 string grant_type= ConfigurationManager.AppSettings["grant_type"].ToString();
@@ -57,5 +56,8 @@ namespace BuysingooShop.Api.Common.CommonHelpers
                 throw e;
             }
         }
+
+
+        
     }
 }

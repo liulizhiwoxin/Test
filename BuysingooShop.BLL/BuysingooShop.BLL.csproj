@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="activity.cs" />
+    <Compile Include="applet_user.cs" />
     <Compile Include="article.cs" />
     <Compile Include="article_albums.cs" />
     <Compile Include="article_attach.cs" />
